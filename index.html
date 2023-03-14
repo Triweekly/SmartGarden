@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang = "en">
         <head>
-                <title> <color=blue>SMART</color><color=green>Garden</color></title>
+                <title> SMART Garden</title>
+                <meta charset="UTF-8"/>
+                <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
                 <script src = "JavaScript/script.js"></script>
         </head>
-        <body>
+        <body onload = "loadReadings();">      <!-- remove 'onload = "loadreadings();"'if this doesn't load right  -->
+                <hl>SMART Garden</hl>
                 <form action="/newPlant.php">
                 <label for ="plant">Choose your plant:</label>
                 <select name = "plant">
