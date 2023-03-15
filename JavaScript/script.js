@@ -5,7 +5,7 @@ function loadReadings()
 {
     console.log("getting sensor readings...");
 
-let url = urlbase + "/loadReadings." + extension;
+let url = urlBase + "/loadReadings." + extension;
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", url, true);
