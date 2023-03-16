@@ -19,7 +19,7 @@ else
 {
     $stmt = $con->prepare("SELECT * FROM currentplant");
 	$stmt->execute();
-	$result = $stmt->getResult();
+	$result = $stmt->get_result();
 	
 	// $command = "SELECT * FROM 'currentplant'";
 
