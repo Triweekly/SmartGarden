@@ -9,7 +9,8 @@ $user = "root";
 // $pass = "qh@X$"."R-4*$%EaP";//attempted to mitigate the $ in the string
 $pass = "840a3a94d50dc378d14deb6874a69626e432dec1146cf9b4";
 
-$con = new mysqli("localhost", $user, $pass, "plantinfo");
+// $con = new mysqli_connect("localhost", $user, $pass, "plantinfo");
+$con = new mysqli_connect("localhost", "reader", "reader", "plantinfo");	//I created  a user I think, so this is their info
 if ($con->connect_error) 
 	{
 		returnWithError($con->connect_error);
