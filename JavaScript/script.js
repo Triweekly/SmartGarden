@@ -3,7 +3,7 @@ const extension = 'php';
 
 function loadReadings()
 {
-    console.log("getting sensor readings...");
+    console.log("Trying to get sensor readings...");
 
 let url = urlBase + "/loadReadings." + extension;
 
@@ -22,3 +22,4 @@ let url = urlBase + "/loadReadings." + extension;
         console.log(err);
     }
 }
+

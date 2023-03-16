@@ -4,7 +4,10 @@ ini_set('display_errors', 'on');
 
 // $plantReadings = "";
 
-$con = new mysqli("localhost", "root", ("qh@X$"."R-4*$%EaP"), "plantinfo");//attempted to mitigate the $ in the string
+$user = "root";
+$pass = "qh@X$"."R-4*$%EaP";
+
+$con = new mysqli("localhost", $user, $pass, "plantinfo");//attempted to mitigate the $ in the string
 if ($con->connect_error) 
 	{
 		returnWithError($con->connect_error);
@@ -28,9 +31,15 @@ function returnWithError( $err )
 		sendResultInfoAsJson( $err );
 	}
 	
-	function returnWithInfo( $foundData )
+function returnWithInfo( $foundData )
 	{
 		$retValue = '{"results":[' . $foundData . '],"error":""}';
 		sendResultInfoAsJson( $retValue );
+	}
+	
+function sendResultInfoAsJson( $obj )
+	{
+		header('Content-type: application/json');
+		echo $obj;
 	}
 ?>
