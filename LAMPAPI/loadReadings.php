@@ -41,7 +41,7 @@ function returnWithError( $err )
 	
 function returnWithInfo( $foundData )
 	{
-		$retValue = '{"results":[' . $foundData . '],"error":""}';
+		$retValue = $foundData;
 		sendResultInfoAsJson( $retValue );
 	}
 	
