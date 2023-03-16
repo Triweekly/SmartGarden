@@ -14,9 +14,12 @@ if ($con->connect_error)
 	} 
 else
 {
-    $stmt = $con->prepare("select * from currentplant");
-    $stmt->execute();
-    $result = stmt->getResult();
+    //$stmt = $con->prepare("SELECT * FROM 'currentplant'");
+	//$stmt->execute();
+	//$result = stmt->getResult();
+	$command = "SELECT * FROM 'currentplant'";
+    $result = mysql_query($command);
+	
 
     while($row = $result->fetch_assoc())
     {
