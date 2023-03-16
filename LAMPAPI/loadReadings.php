@@ -5,9 +5,9 @@ ini_set('display_errors', 'on');
 // $plantReadings = "";
 
 $user = "root";
-$pass = "qh@X$"."R-4*$%EaP";
+$pass = "qh@X$"."R-4*$%EaP";//attempted to mitigate the $ in the string
 
-$con = new mysqli("localhost", $user, $pass, "plantinfo");//attempted to mitigate the $ in the string
+$con = new mysqli_connect("localhost", $user, $pass, "plantinfo");
 if ($con->connect_error) 
 	{
 		returnWithError($con->connect_error);
