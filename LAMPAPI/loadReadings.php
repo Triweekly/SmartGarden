@@ -17,13 +17,13 @@ if ($con->connect_error)
 	} 
 else
 {
-    //$stmt = $con->prepare("SELECT * FROM 'currentplant'");
-	//$stmt->execute();
-	//$result = stmt->getResult();
+    $stmt = $con->prepare("SELECT * FROM 'currentplant'");
+	$stmt->execute();
+	$result = stmt->getResult();
 	
-	$command = "SELECT * FROM 'currentplant'";
+	// $command = "SELECT * FROM 'currentplant'";
 
-    $result = $command->mysql_query();
+    // $result = $command->mysql_query();
 	
 
     while($row = $result->fetch_assoc())
