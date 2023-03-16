@@ -17,7 +17,7 @@ if ($con->connect_error)
 	} 
 else
 {
-    $stmt = $con->prepare("SELECT * FROM 'currentplant'");
+    $stmt = $con->prepare("SELECT * FROM currentplant");
 	$stmt->execute();
 	$result = stmt->getResult();
 	
@@ -28,7 +28,7 @@ else
 
     while($row = $result->fetch_assoc())
     {
-        $plantReadings ='"' . $row["name"] .','. $row["moisture"] .','. $row["uv"] .','. $row[humidity] .','. $row[temperature] . '"';
+        $plantReadings ='"' . $row["name"] .','. $row["moisture"] .','. $row["uv"] .','. $row["humidity"] .','. $row["temperature"] . '"';
     }
     returnWithInfo($plantReadings);
 }
