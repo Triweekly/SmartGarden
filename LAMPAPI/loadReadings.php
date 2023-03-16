@@ -17,7 +17,8 @@ if ($con->connect_error)
 	} 
 else
 {
-    $stmt = $con->prepare("SELECT * FROM 'currentplant';");
+    // $stmt = $con->prepare("SELECT * FROM 'currentplant'");
+	$stmt = prepare($con, "SELECT * FROM 'currentplant'");
 	$stmt->execute();
 	$result = stmt->getResult();
 	
