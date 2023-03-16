@@ -1,11 +1,11 @@
-const urlBase = 'http://www.smartgarden34.com/SmartGarden';
+const urlBase = 'http://www.smartgarden34.com/SmartGarden/LAMPAPI/';
 const extension = 'php';
 
 function loadReadings()
 {
     console.log("Trying to get sensor readings...");
 
-let url = urlBase + "/loadReadings." + extension;
+let url = urlBase + "loadReadings." + extension;
 
     let xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);    //FIXME trying Get instead of POST

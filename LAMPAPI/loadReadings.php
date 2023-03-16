@@ -18,7 +18,7 @@ else
     //$stmt = $con->prepare("SELECT * FROM 'currentplant'");
 	//$stmt->execute();
 	//$result = stmt->getResult();
-	execute("USE 'plantinfo")
+	execute("USE 'plantinfo'");
 	$command = "SELECT * FROM 'currentplant'";
 
     $result = $command->mysql_query();
