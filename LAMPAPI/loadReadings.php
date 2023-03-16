@@ -41,14 +41,14 @@ function returnWithError( $err )
 	
 function returnWithInfo( $foundData )
 	{
-		$retValue = $foundData;
+		$retValue = '{"results":[' . $foundData . '],"error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
 function sendResultInfoAsJson( $obj )
 	{
 		header('Content-type: application/json');
-		header('Access-Control-Allow-Origin: "smartgarden34.com"');
+		header('Access-Control-Allow-Origin: *');
 		echo $obj;
 	}
 ?>
