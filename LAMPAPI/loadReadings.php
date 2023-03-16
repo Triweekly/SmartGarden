@@ -18,8 +18,10 @@ else
     //$stmt = $con->prepare("SELECT * FROM 'currentplant'");
 	//$stmt->execute();
 	//$result = stmt->getResult();
+	execute("USE 'plantinfo")
 	$command = "SELECT * FROM 'currentplant'";
-    $result = mysql_query($command);
+
+    $result = $command->mysql_query();
 	
 
     while($row = $result->fetch_assoc())
