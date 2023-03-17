@@ -9,7 +9,7 @@ let url = urlBase + "loadReadings." + extension;
 console.log(url);
 
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);    //FIXME trying Get instead of POST
+    xhr.open("GET", url, false);    //FIXME trying Get instead of POST
     
     // xhr.setRequestHeader("Content-type", "applciation/json; charset=UTF-8");    //disabling prevents errors, but doesn't make content received.
     
