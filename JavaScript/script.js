@@ -84,6 +84,12 @@ function parseReadings(inString)
 
         }   
         console.log("caseVar = " + caseVar);
+
+        document.getElementById("ph1").innerHTML = getName();
+        document.getElementById("ph2").innerHTML = getMoisture();
+        document.getElementById("ph3").innerHTML = getUV();
+        document.getElementById("ph4").innerHTML = getHumidity();
+        document.getElementById("ph5").innerHTML = getTemperature();
 }
 
 //getters for table
