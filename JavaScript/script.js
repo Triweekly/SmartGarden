@@ -80,7 +80,8 @@ function parseReadings(inString)
 }
 
 //getters for table
-function getName(){return currentName;}
+function  getName(){console.log("currentName is " + currentName);
+    return currentName;}
 function getMoisture(){return currentMoisture;}
 function getUV(){return currentUV;}
 function getHumidity(){return currentHumidity;}
