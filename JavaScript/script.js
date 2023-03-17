@@ -1,11 +1,11 @@
 const urlBase = 'http://www.smartgarden34.com/SmartGarden/LAMPAPI/';
 const extension = 'php';
 
-let currentName;
-let currentMoisture;
-let currentUV;
-let currentHumidity;
-let currentTemperature;
+let currentName = "";
+let currentMoisture = "";
+let currentUV = "";
+let currentHumidity = "";
+let currentTemperature = "";
 
 function loadReadings()
 {
@@ -68,7 +68,7 @@ function parseReadings(inString)
                             console.log(currentUV);
                             break;
                         case 4:
-                            currentHumidity = temp;
+                            currentHumidity = temp.toString();
                             console.log(currentHumidity);
                             break;
                         case 5:
@@ -88,7 +88,7 @@ function parseReadings(inString)
 
 //getters for table
 function  getName(){return currentName.toString();}
-function getMoisture(){return "" + currentMoisture.toString();}
-function getUV(){return "" + currentUV.toString();}
-function getHumidity(){return "" + currentHumidity.toString();}
-function getTemperature(){return "" + currentTemperature.toString();}
+function getMoisture(){return currentMoisture.toString();}
+function getUV(){return currentUV.toString();}
+function getHumidity(){return currentHumidity.toString();}
+function getTemperature(){return currentTemperature.toString();}
