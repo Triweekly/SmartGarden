@@ -41,14 +41,15 @@ function returnWithError( $err )
 	
 function returnWithInfo( $foundData )
 	{
-		$retValue = '{"results":[' . $foundData . '],"error":""}';
+		// $retValue = '{"results":[' . $foundData . '],"error":""}';
+		$retValue = $foundData ;
 		sendResultInfoAsJson( $retValue );
 	}
 	
 function sendResultInfoAsJson( $obj )
 	{
-		header('Access-Control-Allow-Origin: *');	//useful? needed?
-		header('Content-type: application/json');
+		// header('Access-Control-Allow-Origin: *');	//useful? needed?
+		// header('Content-type: application/json');
 		echo $obj;
 	}
 ?>

@@ -16,7 +16,7 @@ console.log(url);
     xhr.send();
     try
     {
-        console.log(xhr.responseText);
+        console.log(xhr.response);  //responseText?
         console.log("logged response text (might be an empty line), now will try to parse:");
         let jsonObject = JSON.parse(xhr.responseText);
         console.log("Next print SHOULD be the returned object from http://www.smartgarden34.com/SmartGarden/LAMPAPI/loadReadings.php");
