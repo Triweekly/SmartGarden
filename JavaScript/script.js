@@ -87,8 +87,8 @@ function parseReadings(inString)
 }
 
 //getters for table
-function  getName(){return currentName;}
-function getMoisture(){return currentMoisture;}
-function getUV(){return currentUV;}
-function getHumidity(){return currentHumidity;}
-function getTemperature(){return currentTemperature;}
+function  getName(){return "" + currentName;}
+function getMoisture(){return "" + currentMoisture;}
+function getUV(){return "" + currentUV;}
+function getHumidity(){return "" + currentHumidity;}
+function getTemperature(){return "" + currentTemperature;}
