@@ -47,7 +47,7 @@ function returnWithInfo( $foundData )
 	
 function sendResultInfoAsJson( $obj )
 	{
-		// header('Access-Control-Allow-Origin: *');	//useful? needed?
+		header('Access-Control-Allow-Origin: *');	//useful? needed?
 		header('Content-type: application/json');
 		echo $obj;
 	}
