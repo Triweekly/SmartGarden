@@ -50,6 +50,7 @@ function sendResultInfoAsJson( $obj )
 	{
 		header('Access-Control-Allow-Origin: *');	//useful? needed?
 		// header('Content-type: application/json');
-		echo $obj;
+		// echo $obj;
+		echo "debug string";
 	}
 ?>
