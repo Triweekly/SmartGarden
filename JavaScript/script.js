@@ -57,18 +57,23 @@ function parseReadings(inString)
                     switch(caseVar) {
                         case 1:
                             currentName = temp;
+                            console.log(currentName);
                             break;
                         case 2:
                             currentMoisture = temp;
+                            console.log(currentMoisture);
                             break;
                         case 3:
                             currentUV = temp;
+                            console.log(currentUV);
                             break;
                         case 4:
                             currentHumidity = temp;
+                            console.log(currentHumidity);
                             break;
                         case 5:
                             currentTemperature = temp;
+                            console.log(currentTemperature);
                             break;
                     }
                     temp = "";
