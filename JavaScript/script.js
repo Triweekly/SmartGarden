@@ -78,6 +78,7 @@ function parseReadings(inString)
                 }   
 
         }   
+        console.log("caseVar = " + caseVar);
 }
 
 //getters for table
