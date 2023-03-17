@@ -43,6 +43,7 @@ console.log(url);
 
 function parseReadings(inString)
 {
+    console.log("inString is " + inString);
     let temp = "";
     let caseVar = 1;
     for(let i = 0 ; i < inString.length ; i++)
@@ -80,8 +81,7 @@ function parseReadings(inString)
 }
 
 //getters for table
-function  getName(){console.log("currentName is " + currentName);
-    return currentName;}
+function  getName(){return currentName;}
 function getMoisture(){return currentMoisture;}
 function getUV(){return currentUV;}
 function getHumidity(){return currentHumidity;}
