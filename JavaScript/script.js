@@ -109,7 +109,7 @@ function setPlant()
     // let chosenPlant = document.getElementById("plantChoice");
     // let newName = chosenPlant.value.toString;
     // console.log("new name is " + newName);
-    let newName ="testString";
-    document.getElementById("line").innerHTML = newName;
-    console.log("called js setPlant() but why isn't it working");
+    // let newName ="testString";
+    // document.getElementById("line").innerHTML = newName;
+    console.log("called js setPlant()");
 }
