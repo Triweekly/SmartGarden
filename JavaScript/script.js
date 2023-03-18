@@ -93,8 +93,16 @@ function parseReadings(inString)
 }
 
 //getters for table
-function  getName(){return currentName;}
+function getName(){return currentName;}
 function getMoisture(){return currentMoisture;}
 function getUV(){return currentUV;}
 function getHumidity(){return currentHumidity;}
 function getTemperature(){return currentTemperature;}
+
+function setPlant()
+{
+    // let chosenPlant = document.getElementById("plantChoice");
+    // let newName = chosenPlant.value.toString;
+    // console.log("new name is " + newName);
+    document.getElementById("testing").innerHTML = "newName";
+}

@@ -1,6 +1,5 @@
 <?php
 
-echo file_get_contents('php://input');
-
+print("this page/button currently doesn't do anything");
 
 ?> 
