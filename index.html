@@ -9,7 +9,7 @@
         </head>
         <body onload = "loadReadings();">      <!-- remove 'onload = "loadreadings();"'if this doesn't load right  -->
                 <hl>SMART Garden</hl>
-                <form onsubmit="return setPlant()">    <!-- maybe /newPlant.php  -->
+                <form id = "plantDropdown">    <!-- maybe /newPlant.php  -->
                 <label for ="plant">Choose your plant:</label>
                 <select id = "plantChoice", name = "plant">
                         <option value = "basil">Basil</option>
@@ -21,6 +21,11 @@
                 </select>
                 <input type = "submit" value = "Submit">
                 </form>
+
+                <script>
+                        document.getElementById("plantChoice").onSubmit = setPlant();
+                </script>
+
                 <hl id = "testing">Delete this line eventually, it's for testing.</hl>
                 <br><br>
 
