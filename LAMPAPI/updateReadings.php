@@ -5,10 +5,10 @@ ini_set('display_errors', 'on');
 
 $passedData = json_decode(file_get_contents('php://input'), true);;
 
-$moisture = passedData["moisture"];
-$uv = passedData["uv"];
-$humidity = passedData["humidity"];
-$temperature = passedData["temperature"];
+$moisture = $passedData["moisture"];
+$uv = $passedData["uv"];
+$humidity = $passedData["humidity"];
+$temperature = $passedData["temperature"];
 
 
 $con = mysqli_connect("localhost", "reader", "reader", "plantinfo");
