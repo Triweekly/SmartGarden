@@ -9,7 +9,7 @@
         </head>
         <body onload = "loadReadings();">
                 <hl>SMART Garden</hl>
-                <form>    <!-- maybe /newPlant.php  -->
+                <form>    <!-- maybe need an action here -->
                 <label for ="plant">Choose your plant:</label>
                 <select id = "plantChoice", name = "plant">
                         <option value = "basil">Basil</option>
@@ -20,7 +20,8 @@
                         <option value = "custom">Custom</option>
                 </select><br>
                 
-                <button onclick = "SetPlant()">Submit</button><br>      
+                <button id = "butSubmit", onclick = "SetPlant()">Submit</button><br>   
+                
                 </form>
                 
                 <!-- <script>

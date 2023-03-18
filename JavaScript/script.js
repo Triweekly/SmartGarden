@@ -105,7 +105,7 @@ function getTemperature(){return currentTemperature;}
 
 function setPlant()
 {
-    event.preventDefault();
+    
     // let chosenPlant = document.getElementById("plantChoice");
     // let newName = chosenPlant.value.toString;
     // console.log("new name is " + newName);
