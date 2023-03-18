@@ -105,4 +105,5 @@ function setPlant()
     // let newName = chosenPlant.value.toString;
     // console.log("new name is " + newName);
     document.getElementById("testing").innerHTML = "newName";
+    console.log("called js setPlant() but why isn't it working");
 }
