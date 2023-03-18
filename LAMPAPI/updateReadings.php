@@ -14,7 +14,7 @@ if(is_null($moisture)||is_null($uv)||is_null($humidity)||is_null($temperature))
 {
     returnWithError("This is not the proper way to use this php file, try using the proper channels");//comment out this if() if you need to debug and see the error messages
 }
-
+else{
 $con = mysqli_connect("localhost", "reader", "reader", "plantinfo");
 if ($con->connect_error) 
 	{
@@ -35,6 +35,7 @@ else
 
     
     // returnWithError("");
+}
 }
 
 function returnWithError( $err )
