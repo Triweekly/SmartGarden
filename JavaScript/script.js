@@ -7,6 +7,10 @@ let currentUV = "";
 let currentHumidity = "";
 let currentTemperature = "";
 
+
+document.getElementById("butSubmit").onclick = setPlant();
+
+
 function loadReadings()
 {
     console.log("Trying to get sensor readings...");
