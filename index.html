@@ -9,7 +9,7 @@
         </head>
         <body onload = "loadReadings();">
                 <hl>SMART Garden</hl>
-                <form action = "LAMPAPI/newPlant.php">    <!-- maybe /newPlant.php  -->
+                <form>    <!-- maybe /newPlant.php  -->
                 <label for ="plant">Choose your plant:</label>
                 <select id = "plantChoice", name = "plant">
                         <option value = "basil">Basil</option>
@@ -19,7 +19,7 @@
                         <option value = "cilantro">Cilantro</option>
                         <option value = "custom">Custom</option>
                 </select>
-                <input type = "submit" value = "Submit">
+                <button type = "submit" onclick = "setPlant()">Submit</button>
                 </form>
 
                 <script>
