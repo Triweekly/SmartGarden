@@ -8,7 +8,7 @@ let currentHumidity = "";
 let currentTemperature = "";
 
 
-document.getElementById("butSubmit").onclick = setPlant();
+
 
 
 function loadReadings()
