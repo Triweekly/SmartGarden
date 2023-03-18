@@ -19,7 +19,7 @@ if ($con->connect_error)
 else
 {
     $stmt = $con->prepare("UPDATE currentreadings SET moisture = ?, uv = ?, humidity = ?, temperature = ?");
-    $stmt->bind_param(dddd, $moisture, $uv, $humidity, $temperature);
+    $stmt->bind_param('dddd', $moisture, $uv, $humidity, $temperature);
 	$stmt->execute();
 	$stmt->close();
     $con->close();
