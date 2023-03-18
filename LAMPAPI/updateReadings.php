@@ -22,8 +22,8 @@ if ($con->connect_error)
 	} 
 else
 {
-    $stmt = $con->prepare("UPDATE currentreadings SET moisture = ?, uv = ?, humidity = ?, temperature = ?");
-    $stmt->bind_param('dddd', $moisture, $uv, $humidity, $temperature);
+    $stmt = $con->prepare("UPDATE currentreadings SET moisture = ?, uv = ?, humidity = ?, temperature = ?");	//doesn't need to worry about the name, because that has nothing to do with the readings.
+    $stmt->bind_param('dddd', $moisture, $uv, $humidity, $temperature);	//d is float. string would be s, integers would be i
 	$stmt->execute();
 	$stmt->close();
     $con->close();
