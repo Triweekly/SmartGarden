@@ -16,7 +16,7 @@
                 <hl>SMART Garden</hl>
                 <form>    <!-- maybe need an action here -->
                 <label for ="plant">Choose your plant:</label>
-                <select id = "plantChoice", name = "plant">
+                <select id = "plantChoice" name = "plant" onchange="customShowHide()">
                         <option value = "basil">Basil</option>
                         <option value = "mint">Mint</option>
                         <option value = "dill">Dill</option>
@@ -26,18 +26,18 @@
                 </select><br>
                 </form>
 
-                <label hidden for  = "plantName"><br>Enter plant name: </label>
-                <input hidden type = "text" id = "plantName">
-                <label hidden for  = "plantMoisture"><br>Enter ideal moisture(%): </label>
-                <input hidden type = "number" id = "plantMoisture" min = "0">
-                <label hidden for  = "plantUV"><br>Enter ideal UV exposure: </label>
-                <input hidden type = "number" id = "plantUV" min = "0">
-                <label hidden for  = "plantHumidity"><br>Enter ideal Humidity: </label>
-                <input hidden type = "number" id = "plantHumidity" min = "0">
-                <label hidden for  = "plantTemperature"><br>Enter ideal Temperature: </label>
-                <input hidden type = "number" id = "plantTemperature" min = "0">
+                <label hidden class = "customInput" for  = "plantName"><br>Enter plant name: </label>
+                <input hidden class = "customInput" type = "text" id = "plantName">
+                <label hidden class = "customInput" for  = "plantMoisture"><br>Enter ideal moisture(%): </label>
+                <input hidden class = "customInput" type = "number" id = "plantMoisture" min = "0">
+                <label hidden class = "customInput" for  = "plantUV"><br>Enter ideal UV exposure: </label>
+                <input hidden class = "customInput" type = "number" id = "plantUV" min = "0">
+                <label hidden class = "customInput" for  = "plantHumidity"><br>Enter ideal Humidity: </label>
+                <input hidden class = "customInput" type = "number" id = "plantHumidity" min = "0">
+                <label hidden class = "customInput" for  = "plantTemperature"><br>Enter ideal Temperature: </label>
+                <input hidden class = "customInput" type = "number" id = "plantTemperature" min = "0">
                 
-                <br><br>
+                <br>
                 
                 
 
