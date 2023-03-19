@@ -106,16 +106,36 @@ function getTemperature(){return currentTemperature;}
 function customShowHide()
 {
     let comp = "custom";
-    let opt = document.getElementById("plantChoice").value.toString();
-console.log(opt)
-
+    let opt = document.getElementById("plantChoice").value;
+// console.log(opt.length)
+// console.log(comp.length)
+    
     if(opt===comp)
         {
-            document.getElementsByClassName("customInput").hidden = false;
+            document.getElementById("label1").hidden = false;
+            document.getElementById("label2").hidden = false;
+            document.getElementById("label3").hidden = false;
+            document.getElementById("label4").hidden = false;
+            document.getElementById("label5").hidden = false;
+            document.getElementById("plantName").hidden = false;
+            document.getElementById("plantMoisture").hidden = false;
+            document.getElementById("plantUV").hidden = false;
+            document.getElementById("plantHumidity").hidden = false;
+            document.getElementById("plantTemperature").hidden = false;
+
         }
     else  
         {
-            document.getElementsByClassName("customInput").hidden = false;
+            document.getElementById("label1").hidden = true;
+            document.getElementById("label2").hidden = true;
+            document.getElementById("label3").hidden = true;
+            document.getElementById("label4").hidden = true;
+            document.getElementById("label5").hidden = true;
+            document.getElementById("plantName").hidden = true;
+            document.getElementById("plantMoisture").hidden = true;
+            document.getElementById("plantUV").hidden = true;
+            document.getElementById("plantHumidity").hidden = true;
+            document.getElementById("plantTemperature").hidden = true;
         }
 }
 

@@ -26,17 +26,28 @@
                 </select><br>
                 </form>
 
-                <label hidden class = "customInput" for  = "plantName"><br>Enter plant name: </label>
-                <input hidden class = "customInput" type = "text" id = "plantName">
-                <label hidden class = "customInput" for  = "plantMoisture"><br>Enter ideal moisture(%): </label>
-                <input hidden class = "customInput" type = "number" id = "plantMoisture" min = "0">
-                <label hidden class = "customInput" for  = "plantUV"><br>Enter ideal UV exposure: </label>
-                <input hidden class = "customInput" type = "number" id = "plantUV" min = "0">
-                <label hidden class = "customInput" for  = "plantHumidity"><br>Enter ideal Humidity: </label>
-                <input hidden class = "customInput" type = "number" id = "plantHumidity" min = "0">
-                <label hidden class = "customInput" for  = "plantTemperature"><br>Enter ideal Temperature: </label>
-                <input hidden class = "customInput" type = "number" id = "plantTemperature" min = "0">
-                
+                <label class = "customInput" for  = "plantName" id = "label1"><br>Enter plant name: </label>
+                <input class = "customInput" type = "text" id = "plantName">
+                <label class = "customInput" for  = "plantMoisture" id = "label2"><br>Enter ideal moisture(%): </label>
+                <input class = "customInput" type = "number" id = "plantMoisture" min = "0">
+                <label class = "customInput" for  = "plantUV" id = "label3"><br>Enter ideal UV exposure: </label>
+                <input class = "customInput" type = "number" id = "plantUV" min = "0">
+                <label class = "customInput" for  = "plantHumidity" id = "label4"><br>Enter ideal Humidity: </label>
+                <input class = "customInput" type = "number" id = "plantHumidity" min = "0">
+                <label class = "customInput" for  = "plantTemperature" id = "label5"><br>Enter ideal Temperature: </label>
+                <input class = "customInput" type = "number" id = "plantTemperature" min = "0">
+                <script>
+                        document.getElementById("label1").hidden = true;
+                        document.getElementById("label2").hidden = true;
+                        document.getElementById("label3").hidden = true;
+                        document.getElementById("label4").hidden = true;
+                        document.getElementById("label5").hidden = true;
+                        document.getElementById("plantName").hidden = true;
+                        document.getElementById("plantMoisture").hidden = true;
+                        document.getElementById("plantUV").hidden = true;
+                        document.getElementById("plantHumidity").hidden = true;
+                        document.getElementById("plantTemperature").hidden = true;
+                </script>
                 <br>
                 
                 
