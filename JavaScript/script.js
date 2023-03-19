@@ -107,9 +107,7 @@ function customShowHide()
 {
     let comp = "custom";
     let opt = document.getElementById("plantChoice").value;
-// console.log(opt.length)
-// console.log(comp.length)
-    
+
     if(opt===comp)
         {
             document.getElementById("label1").hidden = false;
