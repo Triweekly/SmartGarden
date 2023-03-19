@@ -26,15 +26,16 @@
                 </select><br>
                 
                 </form>
-
-                <button onclick = "htmlSetPlant();" value = "Set Plant Type"></button><br>
-                
-                <script src = "JavaScript/script.js">
+<script src = "JavaScript/script.js">
                         function htmlSetPlant()
                         {
                                 setPlant();
+                                document.getElementById("line").innerHTML = "changed";
                         };
                 </script>
+                <button onclick = "htmlSetPlant();" value = "Set Plant Type">Set Plant</button><br>
+                
+                
                 
 
                 <p id = "line">Delete this line eventually, it's for testing.</p>
