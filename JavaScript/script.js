@@ -13,10 +13,10 @@ let currentTemperature = "";
 
 function loadReadings()
 {
-    console.log("Trying to get sensor readings...");
+    // console.log("Trying to get sensor readings...");
 
 let url = urlBase + "loadReadings." + extension;
-console.log(url);
+// console.log(url);
 
     let xhr = new XMLHttpRequest();
     xhr.open("GET", url, false);    //FIXME trying Get instead of POST
@@ -26,8 +26,8 @@ console.log(url);
     xhr.send();
     try
     {
-        console.log(xhr.response);  //responseText?
-        console.log("logged response text (might be an empty line), now will try to parse:");
+        // console.log(xhr.response);  //responseText?
+        // console.log("logged response text (might be an empty line), now will try to parse:");
         parseReadings(xhr.response);
 
 
@@ -47,7 +47,7 @@ console.log(url);
 
 function parseReadings(inString)
 {
-    console.log("inString is " + inString);
+    // console.log("inString is " + inString);
     let temp = "";
     let caseVar = 1;
     for(let i = 0 ; i < inString.length ; i++)
@@ -61,23 +61,23 @@ function parseReadings(inString)
                     switch(caseVar) {
                         case 1:
                             currentName = temp;
-                            console.log(currentName);
+                            // console.log(currentName);
                             break;
                         case 2:
                             currentMoisture = temp;
-                            console.log(currentMoisture);
+                            // console.log(currentMoisture);
                             break;
                         case 3:
                             currentUV = temp;
-                            console.log(currentUV);
+                            // console.log(currentUV);
                             break;
                         case 4:
                             currentHumidity = temp.toString();
-                            console.log(currentHumidity);
+                            // console.log(currentHumidity);
                             break;
                         case 5:
                             currentTemperature = temp;
-                            console.log(currentTemperature);
+                            // console.log(currentTemperature);
                             break;
                     }
                     temp = "";
@@ -87,7 +87,7 @@ function parseReadings(inString)
                 }   
 
         }   
-        console.log("caseVar = " + caseVar);
+        // console.log("caseVar = " + caseVar);
 
         document.getElementById("ph1").innerHTML = getName();
         document.getElementById("ph2").innerHTML = getMoisture();
@@ -103,6 +103,20 @@ function getUV(){return currentUV;}
 function getHumidity(){return currentHumidity;}
 function getTemperature(){return currentTemperature;}
 
+function customShowHide()
+{
+    let opt = document.getElementById("plantChoice").value.toString();
+    if(opt=="custom")
+        {
+            document.getElementsByClassName("customInput").hidden = false;
+        }
+    else  
+        {
+            document.getElementsByClassName("customInput").hidden = false;
+        }
+}
+
+
 function setPlant()
 {
     let url = urlBase + "setPlant." + extension;
@@ -114,5 +128,8 @@ function setPlant()
     
 
     document.getElementById("line").innerHTML = newName;
-    console.log("called js setPlant()");
+    console.log("called js setPlant(). Though not done at all yet, Planning to leave Custom considerations for last.");
+
+
+
 }

@@ -24,18 +24,27 @@
                         <option value = "cilantro">Cilantro</option>
                         <option value = "custom">Custom</option>
                 </select><br>
-                
                 </form>
 
-                <button onclick = "setPlant();" value = "Set Plant Type">Set Plant Type
-                        <!-- <script>
-                                function htmlSetPlant()
-                                {
-                                        setPlant();
-                                        document.getElementById("line").innerHTML = "changed";
-                                };
-                        </script> -->
-                </button>
+                <label hidden for  = "plantName"><br>Enter plant name: </label>
+                <input hidden type = "text" id = "plantName">
+                <label hidden for  = "plantMoisture"><br>Enter ideal moisture(%): </label>
+                <input hidden type = "number" id = "plantMoisture" min = "0">
+                <label hidden for  = "plantUV"><br>Enter ideal UV exposure: </label>
+                <input hidden type = "number" id = "plantUV" min = "0">
+                <label hidden for  = "plantHumidity"><br>Enter ideal Humidity: </label>
+                <input hidden type = "number" id = "plantHumidity" min = "0">
+                <label hidden for  = "plantTemperature"><br>Enter ideal Temperature: </label>
+                <input hidden type = "number" id = "plantTemperature" min = "0">
+                
+                <br><br>
+                
+                
+
+
+
+
+                <button onclick = "setPlant();" value = "Set Plant Type">Set Plant Type</button>
 
 
                 <br>
