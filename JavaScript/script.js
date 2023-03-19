@@ -105,11 +105,14 @@ function getTemperature(){return currentTemperature;}
 
 function setPlant()
 {
+    let url = urlBase + "setPlant." + extension;
+
+
+    let chosenPlant = document.getElementById("plantChoice");
+    let newName = chosenPlant.value.toString;
+    console.log("new name is " + newName);
     
-    // let chosenPlant = document.getElementById("plantChoice");
-    // let newName = chosenPlant.value.toString;
-    // console.log("new name is " + newName);
-    // let newName ="testString";
-    document.getElementById("line").innerHTML = "element affected";
+
+    document.getElementById("line").innerHTML = newString
     console.log("called js setPlant()");
 }
