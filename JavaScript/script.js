@@ -113,6 +113,6 @@ function setPlant()
     console.log("new name is " + newName);
     
 
-    document.getElementById("line").innerHTML = newString
+    document.getElementById("line").innerHTML = newName;
     console.log("called js setPlant()");
 }
