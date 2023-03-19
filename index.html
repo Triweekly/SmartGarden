@@ -12,7 +12,7 @@
                         }
                 </style>
         </head>
-        <body onload = "loadReadings();">
+        <body onload = "loadReadings();tryingsomething();">
                 <hl>SMART Garden</hl>
                 <form>    <!-- maybe need an action here -->
                 <label for ="plant">Choose your plant:</label>
@@ -28,14 +28,19 @@
 
                 <label class = "customInput" for  = "plantName" id = "label1"><br>Enter plant name: </label>
                 <input class = "customInput" type = "text" id = "plantName" maxlength="25">     <!--Technically max is 30 but idk why 25 seems better to manage displaying. Reevaluate based on characters available to print on screen?-->
+                
                 <label class = "customInput" for  = "plantMoisture" id = "label2"><br>Enter ideal moisture(%): </label>
                 <input class = "customInput" type = "number" id = "plantMoisture" min = "0">
+                
                 <label class = "customInput" for  = "plantUV" id = "label3"><br>Enter ideal UV exposure: </label>
                 <input class = "customInput" type = "number" id = "plantUV" min = "0">
+                
                 <label class = "customInput" for  = "plantHumidity" id = "label4"><br>Enter ideal Humidity: </label>
                 <input class = "customInput" type = "number" id = "plantHumidity" min = "0">
+                
                 <label class = "customInput" for  = "plantTemperature" id = "label5"><br>Enter ideal Temperature: </label>
                 <input class = "customInput" type = "number" id = "plantTemperature" min = "0">
+                
                 <script>
                         document.getElementById("label1").hidden = true;
                         document.getElementById("label2").hidden = true;

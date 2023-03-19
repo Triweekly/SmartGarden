@@ -7,7 +7,7 @@ let currentUV = "";
 let currentHumidity = "";
 let currentTemperature = "";
 
-
+function tryingsomething(){console.log("So you can do onload = \"function1();function2;");}
 
 
 
