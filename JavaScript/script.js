@@ -110,6 +110,6 @@ function setPlant()
     // let newName = chosenPlant.value.toString;
     // console.log("new name is " + newName);
     // let newName ="testString";
-    // document.getElementById("line").innerHTML = newName;
+    document.getElementById("line").innerHTML = "element affected";
     console.log("called js setPlant()");
 }
