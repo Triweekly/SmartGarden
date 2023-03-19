@@ -109,7 +109,7 @@ function setPlant()
 
 
     let chosenPlant = document.getElementById("plantChoice");
-    let newName = chosenPlant.value.toString;
+    let newName = chosenPlant.value.toString();
     console.log("new name is " + newName);
     
 
