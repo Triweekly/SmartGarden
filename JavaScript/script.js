@@ -132,7 +132,7 @@ let url = urlBase + "checkPrefs." + extension;
 
 
 
-function parsePrefs()
+function parsePrefs(inString)
 {
     // console.log("inString is " + inString);
     let temp = "";
