@@ -14,13 +14,9 @@ else
     $stmt = $con->prepare("SELECT * FROM currentreadings");
 	$stmt->execute();
 	$result = $stmt->get_result();
-	
-	// $command = "SELECT * FROM 'currentplant'";
 
-    // $result = $command->mysql_query();
-	
 
-    while($row = $result->fetch_assoc())
+	while($row = $result->fetch_assoc())
     {
         $plantReadings = $row["name"] .','. $row["moisture"] .','. $row["uv"] .','. $row["humidity"] .','. $row["temperature"] . ',';
     }

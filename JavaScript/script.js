@@ -7,7 +7,7 @@ let currentUV = "";
 let currentHumidity = "";
 let currentTemperature = "";
 
-function tryingsomething(){console.log("So you can do onload = \"function1();function2;");}
+
 
 
 
@@ -19,23 +19,19 @@ let url = urlBase + "loadReadings." + extension;
 // console.log(url);
 
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", url, false);    //FIXME trying Get instead of POST
+    xhr.open("GET", url, false);
     
-    // xhr.setRequestHeader("Content-type", "applciation/json; charset=UTF-8");    //disabling prevents errors, but doesn't make content received.
+   
     
     xhr.send();
     try
     {
-        // console.log(xhr.response);  //responseText?
-        // console.log("logged response text (might be an empty line), now will try to parse:");
+        
         parseReadings(xhr.response);
 
 
 
-        // let jsonObject = JSON.parse(xhr.responseText);
-        // console.log("Next print SHOULD be the returned object from http://www.smartgarden34.com/SmartGarden/LAMPAPI/loadReadings.php");
-        // console.log(jsonObject);
-        //in future, assign these to places on a table
+        
     }
     catch(err)
     {
@@ -102,6 +98,91 @@ function getMoisture(){return currentMoisture;}
 function getUV(){return currentUV;}
 function getHumidity(){return currentHumidity;}
 function getTemperature(){return currentTemperature;}
+
+
+function checkPrefs()
+{
+
+
+let url = urlBase + "checkPrefs." + extension;
+// console.log(url);
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", url, false);
+    
+   
+    
+    xhr.send();
+    try
+    {
+        
+        parsePrefs(xhr.response);    //make new one
+
+
+
+        
+    }
+    catch(err)
+    {
+        console.log("Error encountered:");
+        console.log(err);
+    }
+}
+
+
+
+
+function parsePrefs()
+{
+    // console.log("inString is " + inString);
+    let temp = "";
+    let caseVar = 1;
+    for(let i = 0 ; i < inString.length ; i++)
+        {
+            if(inString.charAt(i)!=',')
+                {
+                    temp += inString.charAt(i);
+                }
+            else
+                {
+                    switch(caseVar) {
+                        
+                        case 1:
+                            document.getElementById("pref1").innerHTML = temp;
+                            // console.log(currentMoisture);
+                            break;
+                        case 2:
+                            document.getElementById("pref2").innerHTML = temp;
+                            // console.log(currentUV);
+                            break;
+                        case 3:
+                            document.getElementById("pref3").innerHTML = temp;
+                            // console.log(currentHumidity);
+                            break;
+                        case 4:
+                            document.getElementById("pref4").innerHTML = temp;
+                            // console.log(currentTemperature);
+                            break;
+                    }
+                    temp = "";
+                    caseVar++;
+
+
+                }   
+
+        }   
+        // console.log("caseVar = " + caseVar);
+
+        // document.getElementById("ph1").innerHTML = getName();
+        // document.getElementById("ph2").innerHTML = getMoisture();
+        // document.getElementById("ph3").innerHTML = getUV();
+        // document.getElementById("ph4").innerHTML = getHumidity();
+        // document.getElementById("ph5").innerHTML = getTemperature();
+}
+
+
+
+
 
 function customShowHide()
 {

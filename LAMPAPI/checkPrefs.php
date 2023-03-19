@@ -1,9 +1,46 @@
 <?php
 
-print("this page/button currently doesn't do anything. Will eventually provide the data to the arduino of what plant and preferences are currently being requested.");
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 
-//get name from entry with all -1s
-//get stats from entry named Custom.
-//send as response (maybe as JSON? Maybe text the Arduino can parse more easily) like loadReadings.php
 
-?> 
+$con = mysqli_connect("localhost", "reader", "reader", "plantinfo");	//I created  a user I think, so this is their info
+if ($con->connect_error) 
+	{
+		returnWithError($con->connect_error);
+	} 
+else
+{
+    $stmt = $con->prepare("SELECT moisture, uv, humidity, temperature FROM currentplant");
+	$stmt->execute();
+	$result = $stmt->get_result();
+
+
+	while($row = $result->fetch_assoc())
+    {
+        $plantPrefs = $row["moisture"] .','. $row["uv"] .','. $row["humidity"] .','. $row["temperature"] . ',';
+    }
+    returnWithInfo($plantPrefs);
+}
+
+function returnWithError( $err )
+	{
+		
+		sendResultInfoAsJson( $err );
+	}
+	
+function returnWithInfo( $foundData )
+	{
+		// $retValue = '{"results":[' . $foundData . '],"error":""}';
+		$retValue = $foundData ;
+		sendResultInfoAsJson( $retValue );
+	}
+	
+function sendResultInfoAsJson( $obj )
+	{
+		header('Access-Control-Allow-Origin: *');	//useful? needed?
+		// header('Content-type: application/json');
+		echo $obj;
+		
+	}
+?>
