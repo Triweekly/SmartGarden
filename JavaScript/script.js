@@ -106,6 +106,8 @@ function getTemperature(){return currentTemperature;}
 function customShowHide()
 {
     let opt = document.getElementById("plantChoice").value.toString();
+console.log(opt);
+
     if(opt=="custom")
         {
             document.getElementsByClassName("customInput").hidden = false;
