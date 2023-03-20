@@ -235,12 +235,10 @@ function setPlant()
     }
     else    //preset
     {
-    //    let temp = {name:dropdown};
-    //    let dataSent = JSON.stringify(temp);
-    //    console.log(dataSent);
+       let temp = {name:dropdown};
+       let dataSent = JSON.stringify(temp);
+       console.log(dataSent);
 
-    let dataSent = "{name:"+'"'+dropdown+'"'+"}";
-    console.log(dataSent);
 
         let url = urlBase + "setPlant." + extension;
         xhr.open("POST", url, false);
