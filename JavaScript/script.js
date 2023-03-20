@@ -255,7 +255,6 @@ function setPlant()
 
     //PH for syntax:let tmp = {userID: userId, og_firstName: modified.firstName, og_lastname: modified.lastName, og_phoneNumber: modified.phoneNumber, og_email: modified.email,firstName: firstname, lastName: lastname, phoneNumber: pnum, email: email};
 
-    xhr.send();
 
 
     let chosenPlant = document.getElementById("plantChoice");
