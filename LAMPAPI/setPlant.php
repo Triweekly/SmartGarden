@@ -1,9 +1,8 @@
 <?php   //initially an exact copy of updateReadings for a framework=
 
 
-Access-Control-Allow-Origin: *;
+header('Access-Control-Allow-Origin: *');
 
-// header('Access-Control-Allow-Origin: *');
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
