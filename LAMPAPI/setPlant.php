@@ -1,6 +1,6 @@
 <?php   //initially an exact copy of updateReadings for a framework=
 
-header("Access-Control-Allow-Headers","Access-Control-Allow-Headers");
+header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Origin: *');
 header('Content-type: application/json');
 
