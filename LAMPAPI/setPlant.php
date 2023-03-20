@@ -2,6 +2,11 @@
 
 header("Access-Control-Allow-Origin: https://smartgarden34.com");
 header("Access-Control-Allow-Origin: http://smartgarden34.com");
+header("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Origin: https://smartgarden34.com');
+header('Access-Control-Allow-Origin: http://smartgarden34.com');
+header('Access-Control-Allow-Origin: *');   //covering all my bases. Maybe one will work
+
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
