@@ -7,4 +7,4 @@ To Do:<br>
 >If Custom, set plantprefs name = inputName where prefuv = -1, and plantprefs pref__stat__ where name="custom"<br>
 
 •add more plant types to MySQL and update index.html to include them as options in the dropdown object<br>
-
+•Make the plant prefs correct. Right now they're just placeholders
