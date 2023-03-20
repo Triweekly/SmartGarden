@@ -27,7 +27,9 @@ else
     $stmt->bind_param('sssss', $name, $name, $name, $name, $name);	//d is float. string would be s, integers would be i
 	$stmt->execute();
 
-	//$stmt = update name in currentReadings //FIXME!!
+	$stmt = $con->prepare("UPDATE currentreadings SET currentreadings.name = ?");
+	$stmt->bind_param('s', $name);
+	$stmt->execute();
 
 
 	$stmt->close();
