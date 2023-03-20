@@ -7,7 +7,7 @@ header('Content-type: application/json');
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
-$passedData = json_decode(file_get_contents('php://input'), false);
+$passedData = json_decode(file_get_contents('php://input'), false);	//maybe stringify was the issue?
 
 $name = $passedData["name"];
 
@@ -23,7 +23,7 @@ if ($con->connect_error)
 	} 
 else
 {
-    $stmt = $con->prepare("UPDATE currentplant SET currentplant.name = ?, currentplant.moisture = (select plantprefs.prefmoisture from plantprefs where plantprefs.name = ?), currentplant.uv = (select plantprefs.prefuv from plantprefs where plantprefs.name = ?), currentplant.humidity = (select plantprefs.prefhumidity from plantprefs where plantprefs.name = ?), currentplant.temperature = (select plantprefs.preftemperature from plantprefs where plantprefs.name = ?);");	
+    $stmt = $con->prepare("UPDATE currentplant SET currentplant.name = ?, currentplant.moisture = (select plantprefs.prefmoisture from plantprefs where plantprefs.name = ?), currentplant.uv = (select plantprefs.prefuv from plantprefs where plantprefs.name = ?), currentplant.humidity = (select plantprefs.prefhumidity from plantprefs where plantprefs.name = ?), currentplant.temperature = (select plantprefs.preftemperature from plantprefs where plantprefs.name = ?)");	//FIXME? deleted a semicolon
     $stmt->bind_param('sssss', $name, $name, $name, $name, $name);	//d is float. string would be s, integers would be i
 	$stmt->execute();
 	$stmt->close();
