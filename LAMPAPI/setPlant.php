@@ -19,19 +19,18 @@ if ($con->connect_error)
 	} 
 else
 {
-    $stmt = $con->prepare("update currentplant set currentplant.name = ?, currentplant.moisture = (select plantprefs.prefmoisture from plantprefs where plantprefs.name = ?), currentplant.uv = (select plantprefs.prefuv from plantprefs where plantprefs.name = ?), currentplant.humidity = (select plantprefs.prefhumidity from plantprefs where plantprefs.name = ?), currentplant.temperature = (select plantprefs.preftemperature from plantprefs where plantprefs.name = ?);");	
-    $stmt->bind_param('sssss', $name ,$name ,$name ,$name ,$name);	//d is float. string would be s, integers would be i
+    $stmt = $con->prepare("UPDATE currentplant SET currentplant.name = ?, currentplant.moisture = (select plantprefs.prefmoisture from plantprefs where plantprefs.name = ?), currentplant.uv = (select plantprefs.prefuv from plantprefs where plantprefs.name = ?), currentplant.humidity = (select plantprefs.prefhumidity from plantprefs where plantprefs.name = ?), currentplant.temperature = (select plantprefs.preftemperature from plantprefs where plantprefs.name = ?);");	
+    $stmt->bind_param('sssss', $name, $name, $name, $name, $name);	//d is float. string would be s, integers would be i
 	$stmt->execute();
 	$stmt->close();
     $con->close();
 	
-	// $command = "SELECT * FROM 'currentplant'";
 
     // $result = $command->mysql_query();
 	
 
     
-    // returnWithError("");
+    returnWithError("");
 }
 }
 

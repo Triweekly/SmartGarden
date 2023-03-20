@@ -243,8 +243,12 @@ function setPlant()
 
         let url = urlBase + "setPlant." + extension;
         xhr.open("POST", url, false);
+
+        xhr.setRequestHeader();
+
         xhr.send(dataSent);
 
+        checkPrefs();
     }
 
 
