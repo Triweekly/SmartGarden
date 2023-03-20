@@ -245,7 +245,8 @@ function setPlant()
         xhr.open("POST", url, false);
 
         // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-        xhr.setRequestHeader("access-control-allow-origin", "*");
+        
+        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 
         xhr.send(dataSent);
         
