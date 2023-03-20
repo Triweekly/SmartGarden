@@ -1,7 +1,7 @@
 <?php   //initially an exact copy of updateReadings for a framework=
 
 
-header('Access-Control-Allow-Origin: *');
+Access-Control-Allow-Origin: *;
 
 // header('Access-Control-Allow-Origin: *');
 
