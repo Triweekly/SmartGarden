@@ -247,6 +247,7 @@ function setPlant()
         xhr.setRequestHeader('Access-Control-Allow-Origin: *');
 
         xhr.send(dataSent);
+        
 
         checkPrefs();
     }
