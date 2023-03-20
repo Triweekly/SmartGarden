@@ -41,7 +41,7 @@ else
 
 function returnWithError( $err )
 	{
-		
+		header('Access-Control-Allow-Origin: *');	//useful? needed?
 		sendResultInfoAsJson( $err );
 	}
 	
@@ -58,7 +58,7 @@ function sendResultInfoAsJson( $obj )
         header('Access-Control-Allow-Origin: *');
         header('Access-Control-Allow-Origin: http://smartgarden34.com');
 		// header('Content-type: application/json');
-		// echo $obj;
+		echo $obj;
 		
 	}
     
