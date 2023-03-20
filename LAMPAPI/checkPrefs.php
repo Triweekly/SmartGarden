@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
 
-$con = mysqli_connect("localhost", "reader", "reader", "plantinfo");	//I created  a user I think, so this is their info
+$con = mysqli_connect("localhost", "reader", "reader", "plantinfo");	//I created  a user, and this is their info
 if ($con->connect_error) 
 	{
 		returnWithError($con->connect_error);
