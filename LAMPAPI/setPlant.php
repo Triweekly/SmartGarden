@@ -1,4 +1,7 @@
 <?php   //currrently an exact copy of updateReadings for a framework=
+header('Access-Control-Allow-Origin: http://smartgarden34.com/SmartGarden/JavaScript');	//useful? needed?
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: http://smartgarden34.com');
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
@@ -49,9 +52,7 @@ function returnWithInfo( $foundData )
 	
 function sendResultInfoAsJson( $obj )
 	{
-		header('Access-Control-Allow-Origin: http://smartgarden34.com/SmartGarden/JavaScript');	//useful? needed?
-        header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Origin: http://smartgarden34.com');
+		
 		// header('Content-type: application/json');
 		// echo $obj;
 		
