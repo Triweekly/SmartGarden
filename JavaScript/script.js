@@ -244,7 +244,7 @@ function setPlant()
         let url = urlBase + "setPlant." + extension;
         xhr.open("POST", url, false);
 
-        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 
         xhr.send(dataSent);
         
