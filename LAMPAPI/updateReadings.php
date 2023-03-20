@@ -1,4 +1,4 @@
-<?php   //currrently an exact copy of loadreadings for a framework=
+<?php 
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');

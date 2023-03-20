@@ -7,7 +7,7 @@ let currentUV = "";
 let currentHumidity = "";
 let currentTemperature = "";
 
-
+//JSON syntax: {"moisture": 35.6, "uv": 85.2, "humidity": 96.6, "temperature": 46.2}
 
 
 
@@ -21,7 +21,7 @@ let url = urlBase + "loadReadings." + extension;
     let xhr = new XMLHttpRequest();
     xhr.open("GET", url, false);
     
-   
+    
     
     xhr.send();
     try
@@ -221,7 +221,37 @@ function customShowHide()
 
 function setPlant()
 {
-    let url = urlBase + "setPlant." + extension;
+    
+
+    let xhr = new XMLHttpRequest();
+    
+    let dropdown = document.getElementById("plantChoice").value;
+    let comp = "custom";
+
+    if(dropdown === comp)//custom
+    {
+        //doesn't currently update custom
+        console.log("WIP- account for custom plants");
+    }
+    else    //preset
+    {
+       let temp = {name:dropdown};
+       let dataSent = JSON.stringify(temp);
+       console.log(dataSent);
+
+
+
+        let url = urlBase + "setPlant." + extension;
+        xhr.open("POST", url, false);
+        xhr.send(dataSent);
+
+    }
+
+
+
+    //PH for syntax:let tmp = {userID: userId, og_firstName: modified.firstName, og_lastname: modified.lastName, og_phoneNumber: modified.phoneNumber, og_email: modified.email,firstName: firstname, lastName: lastname, phoneNumber: pnum, email: email};
+
+    xhr.send();
 
 
     let chosenPlant = document.getElementById("plantChoice");
@@ -229,7 +259,7 @@ function setPlant()
     console.log("new name is " + newName);
     
 
-    document.getElementById("line").innerHTML = newName;
+    document.getElementById("ph1").innerHTML = newName;
     console.log("called js setPlant(). Though not done at all yet, Planning to leave Custom considerations for last.");
 
 
