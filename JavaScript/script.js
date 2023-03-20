@@ -230,7 +230,7 @@ function setPlant()
 
     if(dropdown === comp)//custom
     {
-        //doesn't currently update custom
+        //doesn't currently try to update custom
         console.log("WIP- account for custom plants");
     }
     else    //preset
