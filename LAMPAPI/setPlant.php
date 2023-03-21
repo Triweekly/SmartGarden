@@ -7,7 +7,7 @@ header('Content-type: application/json');
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
-$passedData = json_decode(file_get_contents('php://input'), false);	//maybe stringify was the issue?
+$passedData = json_decode(file_get_contents('php://input'), true);	//maybe stringify was the issue?
 
 $name = $passedData["name"];
 
