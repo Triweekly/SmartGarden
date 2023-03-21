@@ -5,6 +5,7 @@
                 <meta charset="UTF-8"/>
                 <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
                 <base href = "http://smartgarden34.com/SmartGarden/">
+                <link rel="icon" type="image/x-icon" href ="images/favicon.ico">
                 <script src = "JavaScript/script.js"></script>
                 <style>
                         table, th, td {
@@ -30,13 +31,13 @@
                 <input class = "customInput" type = "text" id = "plantName" maxlength="25">     <!--Technically max is 30 but idk why 25 seems better to manage displaying. Reevaluate based on characters available to print on screen?-->
                 
                 <label class = "customInput" for  = "plantMoisture" id = "label2"><br>Enter ideal moisture(%): </label>
-                <input class = "customInput" type = "number" id = "plantMoisture" min = "0">
+                <input class = "customInput" type = "number" id = "plantMoisture" min = "0" max = "100">
                 
                 <label class = "customInput" for  = "plantUV" id = "label3"><br>Enter ideal UV exposure: </label>
                 <input class = "customInput" type = "number" id = "plantUV" min = "0">
                 
                 <label class = "customInput" for  = "plantHumidity" id = "label4"><br>Enter ideal Humidity: </label>
-                <input class = "customInput" type = "number" id = "plantHumidity" min = "0">
+                <input class = "customInput" type = "number" id = "plantHumidity" min = "0" max = "100">
                 
                 <label class = "customInput" for  = "plantTemperature" id = "label5"><br>Enter ideal Temperature: </label>
                 <input class = "customInput" type = "number" id = "plantTemperature" min = "0">
