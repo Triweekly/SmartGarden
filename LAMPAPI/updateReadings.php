@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
-$passedData = json_decode(file_get_contents('php://input'), false);
+$passedData = json_decode(file_get_contents('php://input'), true);
 
 $moisture = $passedData["moisture"];
 $uv = $passedData["uv"];
