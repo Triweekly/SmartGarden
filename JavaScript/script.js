@@ -127,6 +127,9 @@ let url = urlBase + "checkPrefs." + extension;
         console.log("Error encountered:");
         console.log(err);
     }
+
+    //FIXME set cells that are a problematic reading as a 'bad' color
+
 }
 
 
@@ -268,5 +271,11 @@ function setPlant()
     console.log("called js setPlant(). Though not done at all yet, Planning to leave Custom considerations for last.");
 
 
+
+}
+
+
+function setCustomPlant()
+{
 
 }
