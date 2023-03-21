@@ -87,7 +87,7 @@
                 <br><br>
 
                 <table>
-                        <caption>Sensor Readings</caption>
+                        <caption id = "captionlabel" onmouseenter="captionMouseOn();" onmouseleave="captionMouseOff();" onclick="loadReadings();">Sensor Readings</caption>
                         <tr>
                                 <th scope="col"> Plant Type </th>
                                 <th scope="col"> Moisture </th>
@@ -109,6 +109,19 @@
                                 <td id = "pref3">PH</td>
                                 <td id = "pref4">PH</td>
                         </tr>
+                        <script>
+                                function captionMouseOn()
+                                {
+                                        document.getElementById("captionabel").innerHTML = "<color = blue>Click to refresh readings</color>";
+                                }
+                                function captionMouseOff()
+                                {
+                                        document.getElementById("captionabel").innerHTML = "Sensor Readings";
+                                }
+                        </script>
+
+
+
                 </table>
         </body>
 </html>
