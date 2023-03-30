@@ -3,8 +3,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
-// $passedData = json_decode(file_get_contents('php://input'), true);
-$num = $_GET['num'];
+$passedData = json_decode(file_get_contents('php://input'), true);
+
+$num = $passedData['num'];
 
 
 
