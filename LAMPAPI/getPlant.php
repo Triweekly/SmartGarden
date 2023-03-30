@@ -15,11 +15,11 @@ else
 	$stmt->execute();
 	$result = $stmt->get_result();
 
-    $name = $row["name"];
-    $moisture = $row["moisture"];
-    $uv = $row["uv"];
-    $humidity = $row["humidity"];
-    $temperature = $row["temperature"];
+    // $name = $row["name"];
+    // $moisture = $row["moisture"];
+    // $uv = $row["uv"];
+    // $humidity = $row["humidity"];
+    // $temperature = $row["temperature"];
 
 
     // //              {"moisture": 35.6, "uv": 85.2, "humidity": 96.6, "temperature": 46.2}
@@ -31,7 +31,7 @@ else
 
 	while($row = $result->fetch_assoc())
     {
-        $jsonResponse = "{\"moisture\":" . $name . ", \"uv\":" . $uv . ", \"humidity\":" . $humidity . ", \"temperature\":" . $temperature . "}";
+        $jsonResponse = "{\"name\":" . $row["name"] . ",\"moisture\":" . $row["moisture"] . ", \"uv\":" . $row["uv"] . ", \"humidity\":" . $row["humidity"] . ", \"temperature\":" . $row["temperature"] . "}";
     }
     returnWithInfo($jsonResponse);
 }
