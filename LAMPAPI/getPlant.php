@@ -31,7 +31,7 @@ else
 
 	while($row = $result->fetch_assoc())
     {
-        $jsonResponse = "{\"name\":" . $row["name"] . ",\"moisture\":" . $row["moisture"] . ", \"uv\":" . $row["uv"] . ", \"humidity\":" . $row["humidity"] . ", \"temperature\":" . $row["temperature"] . "}";
+        $jsonResponse = "{\"name\":\"" . $row["name"] . "\",\"moisture\":" . $row["moisture"] . ", \"uv\":" . $row["uv"] . ", \"humidity\":" . $row["humidity"] . ", \"temperature\":" . $row["temperature"] . "}";
     }
     returnWithInfo($jsonResponse);
 }
