@@ -27,7 +27,14 @@
 
                 
         </style>
-        <body onload = "loadReadings();checkPrefs();">
+        <script>
+                function onceMore()
+                {
+                        loadReadings();
+                        setTimeout(onceMore,15000);
+                }
+        </script>
+        <body onload = "loadReadings();checkPrefs();setTimeout(onceMore,15000);">
                 <hl>SMART Garden</hl>
                 <form>    <!-- maybe need an action here -->
                 <label for ="plant">Choose your plant:</label>
