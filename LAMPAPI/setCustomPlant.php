@@ -1,23 +1,4 @@
 <?php   //initially an exact copy of updateReadings for a framework=
-	$inData = getRequestInfo();
-
-	$newPlantName = $inData["newPlantName"];
-    $newMoisture = $inData["newMoisture"];
-    $newUV = $inData["newUV"];
-    $newHumid = $inData["newHumid"];
-	$newTemp = $inData["newHumid"];
-    $newCustomStatus = $inData["newCustomStatus"];
-
-	 $plantName = $inData["name"];
-     $custStat = $inData["custom"];
-
-	// Connect to database
-    $serverName = "localhost";
-    $dBUsername = "root";
-    $dBPassword = "qh@X$R-4*$%EaP";
-    $dbName = "plantprefs";
-
-	$conn = new mysqli($serverName, $dBUsername, $dBPassword, $dbName);
 
 header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Origin: *');
@@ -26,15 +7,39 @@ header('Content-type: application/json');
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
+$inData = getRequestInfo();
+
+	$newPlantName = $inData["newPlantName"];
+    $newMoisture = $inData["newMoisture"];
+    $newUV = $inData["newUV"];
+    $newHumid = $inData["newHumid"];
+	$newTemp = $inData["newTemperature"];
+    $newCustomStatus = $inData["newCustomStatus"];	//probably unneeded, not gonna set a custom plant as not custom. 
+
+	 $plantName = $inData["name"];
+     $custStat = $inData["custom"];
+
+	// Connect to database
+    $serverName = "localhost";
+    $dBUsername = "reader";
+    $dBPassword = "reader";
+    $dbName = "plantinfo";
+
+	$conn = new mysqli($serverName, $dBUsername, $dBPassword, $dbName);
+
+
+
+
+
 $passedData = json_decode(file_get_contents('php://input'), true);	//maybe stringify was the issue?
 
 $name = $passedData["name"];
 
-if(is_null($name))
+if(is_null($newPlantName)||is_null($newMoisture)||is_null($newUV)||is_null($newHumid)||is_null($newTemp))//left out $newCustomStatus since I think it's unneeded and replaced $name since there was no assigned $ called name.
 {
     returnWithError("This is not the proper way to use this php file, try using the proper channels");//comment out this if() if you need to debug and see the error messages
 }
-else
+else	//FIXME the red { here indicates a mismatch, but I'm not 100% sure where the other is intended to end.
 {
 	//check that entry exists 
 	 $sql = "SELECT * FROM plantprefs WHERE name = '$plantName' AND USERID = '$custStat'";
@@ -47,13 +52,13 @@ else
         else
         {
             // Update SQL entry
-            $sql = "UPDATE SET
+            $sql = "UPDATE plantprefs SET		/*	FIXME: $stmt = $con->prepare("");	?	*/
                     name='$newPlantName',
                     prefmoisture='$newPrefMoisture',
                     prefuv= 'newPrefUV',
 					prefhumidity= 'newPrefHumidity',
 					preftemperature = 'newPrefTemperature'
-					custom = 'newCustomStatus'
+					custom = 'newCustomStatus'";
 
        if ($result->num_rows != 1)
        {
