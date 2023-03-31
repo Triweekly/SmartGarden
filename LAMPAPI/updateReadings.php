@@ -5,10 +5,10 @@ ini_set('display_errors', 'on');
 
 $passedData = json_decode(file_get_contents('php://input'), true);
 
-$moisture = $passedData["moisture"];
-$uv = $passedData["uv"];
-$humidity = $passedData["humidity"];
-$temperature = $passedData["temperature"];
+$moisture = $passedData["moisture"]-200;
+$uv = $passedData["uv"]-200;
+$humidity = $passedData["humidity"]-200;
+$temperature = $passedData["temperature"]-200;
 
 if(is_null($moisture)||is_null($uv)||is_null($humidity)||is_null($temperature))
 {
