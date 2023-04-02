@@ -279,3 +279,80 @@ function setCustomPlant()
 {
 
 }
+
+function addDroption()
+{
+
+    let url = urlBase + "getPlantNames." + extension;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", url, false);
+   
+    xhr.send();
+
+
+
+    try
+    {
+        
+        parseNames(xhr.response);    //make new one
+        
+    }
+    catch(err)
+    {
+        console.log("Error encountered:");
+        console.log(err);
+    }
+
+
+}
+
+function parseNames(inString)
+{
+    console.log(inString);
+
+    let opValue = "";
+
+    for(let i = 0 ; i < inString.length()-1 ; i++)
+    {
+        if(inString[i]==',')
+        {
+            console.log(opValue)
+            addToSelect(opValue);
+            opValue = "";
+            continue;
+        } 
+        opValue += inString[i];
+    }
+
+
+
+    
+}
+
+function addToSelect(optionValue)
+{
+
+
+    alert("Do not submit these added options yet, I haven't finished this function");
+    let drop = document.getElementById("plantChoice");
+    let newOp = document.createElement("option");
+    newOp.value = optionValue;//give value
+ 
+    let optionName = optionValue;
+    if(optionName.charAt(0)>=97||optionName.charAt(0)<=122)optionName[0] = optionName.charAt(0)-32; //capitalize the first letter 
+    for(let j = 0 ; j<optionValue.length()-1 ; j++)
+    {
+        if(optionName.charAt(j-1)==' ')
+        {
+            if(optionName.charAt(j)>=97||optionName.charAt(j)<=122)optionName[j] = optionName.charAt(j)-32;
+        }
+    }
+    //now optionName should now be capitalized after spaces
+    console.log("Name is " + optionName + ", value is " + optionValue);
+
+
+
+    newOp.innerHTML = optionName;//give name
+    drop.appendChild(newOp);
+}
