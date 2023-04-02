@@ -18,7 +18,7 @@ else
 	$stmt->execute();
 	$result = $stmt->get_result();
 
-$plantprefs ="";
+// $plantprefs = "";
 
 	while($row = $result->fetch_assoc())
     {
