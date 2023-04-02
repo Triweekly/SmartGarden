@@ -294,8 +294,8 @@ function addDroption()
 
     try
     {
-        
-        parseNames(xhr.response);    //make new one
+        console.log(xhr.response);
+        parseNames(xhr.response);  
         
     }
     catch(err)
