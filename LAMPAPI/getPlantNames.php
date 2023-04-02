@@ -18,11 +18,11 @@ else
 	$stmt->execute();
 	$result = $stmt->get_result();
 
-// $plantprefs = "";
+
 
 	while($row = $result->fetch_assoc())
     {
-        $plantPrefs .= $row["name"] . ',';
+        $plantPrefs = $row["name"] . ',';
     }
     returnWithInfo($plantPrefs);
 }
