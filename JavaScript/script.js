@@ -313,7 +313,7 @@ function parseNames(inString)
 
     let opValue = "";
 
-    for(let i = 0 ; i < inString.length()-1 ; i++)
+    for(let i = 0 ; i < inString.length-1 ; i++)
     {
         if(inString[i]==',')
         {
@@ -341,7 +341,7 @@ function addToSelect(optionValue)
  
     let optionName = optionValue;
     if(optionName.charAt(0)>=97||optionName.charAt(0)<=122)optionName[0] = optionName.charAt(0)-32; //capitalize the first letter 
-    for(let j = 0 ; j<optionValue.length()-1 ; j++)
+    for(let j = 0 ; j<optionValue.length-1 ; j++)
     {
         if(optionName.charAt(j-1)==' ')
         {
