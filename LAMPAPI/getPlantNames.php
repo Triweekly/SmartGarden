@@ -19,7 +19,7 @@ else
 	$result = $stmt->get_result();
 
 $plantprefs ="";
-$
+
 	while($row = $result->fetch_assoc())
     {
         $plantPrefs .= $row["name"] . ',';
