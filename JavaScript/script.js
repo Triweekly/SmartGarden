@@ -282,7 +282,7 @@ function setCustomPlant()
 
 function addDroption()
 {
-
+    console.log("adding droptions...");
     let url = urlBase + "getPlantNames." + extension;
 
     let xhr = new XMLHttpRequest();

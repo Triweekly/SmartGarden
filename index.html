@@ -35,7 +35,7 @@
                         setTimeout(onceMore,15000);
                 }
         </script>
-        <body onload = "loadReadings();checkPrefs();setTimeout(onceMore,15000);addDroption();">
+        <body onload = "addDroption();loadReadings();checkPrefs();setTimeout(onceMore,15000);">
                 <hl>SMART Garden</hl>
                 <form>    <!-- maybe need an action here -->
                 <label for ="plant">Choose your plant:</label>
@@ -89,23 +89,7 @@
                 <br>
                 
                 
-                <!-- <script>
-                        let num = 1;
-                        function addDropOption()
-                        {
-
-                        alert("Do not submit these added numbers, I don't know what might happen to the database if you do.");
-                        let drop = document.getElementById("plantChoice");
-                        let newOp = document.createElement("option");
-                        newOp.value = "mint";
-                        newOp.innerHTML = "plant"+num;
-                        drop.appendChild(newOp);
-                        num++;
-                        }
-
-                </script>
-
-                <button onclick = "addDropOption();">add droption</button> -->
+                
                 
                 <br><br>
 
