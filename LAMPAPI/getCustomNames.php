@@ -14,7 +14,7 @@ if ($con->connect_error)
 	} 
 else
 {
-    $stmt = $con->prepare("SELECT name FROM plantprefs where custom = \"T\"");
+    $stmt = $con->prepare("SELECT name FROM plantprefs where custom = \"T\" ORDER BY name ASC");
 	$stmt->execute();
 	$result = $stmt->get_result();
 
