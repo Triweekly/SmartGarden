@@ -9,7 +9,42 @@ let currentTemperature = "";
 
 //JSON syntax: {"moisture": 35.6, "uv": 85.2, "humidity": 96.6, "temperature": 46.2}
 
+function checkNameInput()       // alpha = 65-90 & 97-122       numeric = 48-57
+{
+        let nameString = document.getElementById("plantName").value + "";
+        let limit = nameString.length;
+        let spaceCount=0;
+        let alertCheck = false;
+        let validName = "";
+        
+        for (let k = 0 ; k < limit ; k++)
+        {
+                let validChar = true;
+                let ter = nameString.charCodeAt(k);
+                
+                if(ter==32) spaceCount++;
 
+                if(!(((ter)>=48&&(ter)<=57)||((ter)>=65&&(ter)<=90)||((ter)>=97&&(ter)<=122)||ter==32))
+                {
+                        // nameString.charAt(k).replace('');
+                        ter=127;
+                        alertCheck = true;
+                        validChar = false;
+                }
+                if(ter==32 && spaceCount >  2)
+                {
+                        // nameString.charAt(k).replace('');
+                        ter=127;
+                        validChar = false;
+                        alertCheck = true;
+                }
+                if(validChar)validName += String.fromCharCode(ter);
+        }
+        console.log(validName);
+        document.getElementById("plantName").value=validName;
+        if(alertCheck)alert("Please only use A-Z, a-z, and 0-9, and a maximum of 2 spaces.");   //FIXME replace with a visual popup and disable submit buutton?
+        else{}//hide the popup and enable submit button
+}
 
 function loadReadings()
 {
