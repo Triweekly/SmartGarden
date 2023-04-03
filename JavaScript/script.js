@@ -366,17 +366,17 @@ firstWord=words[0];
 if(words[1]!=null)secondWord = words[1];
 if(words[2]!=null)thirdWord = words[2];
 
-let titleWord1 = (firstWord.charAt(0)-32)+firstWord.substring(1);
+let titleWord1 = (firstWord.charAt(0).toUpperCase)+firstWord.substring(1);
 let titleWord2 = "";
 let titleWord3 = "";
 if(words[1]!=null)
 {
-    titleWord2 = (secondWord.charAt(0)-32)+secondWord.substring(1);
+    titleWord2 = (secondWord.charAt(0).toUpperCase)+secondWord.substring(1);
 }
 
 if(words[2]!=null)
 {
-    titleWord3 = (thirdWord.charAt(0)-32)+thirdWord.substring(1);
+    titleWord3 = (thirdWord.charAt(0).toUpperCase)+thirdWord.substring(1);
 }
 
 
