@@ -295,7 +295,7 @@ function addDroption()
     try
     {
         console.log(xhr.response);
-        parseNames(xhr.response);  
+        parseNames(xhr.response, false);  
         
     }
     catch(err)
@@ -314,7 +314,7 @@ function addDroption()
     try
     {
         console.log(xhr.response);
-        parseNames(xhr.response);  
+        parseNames(xhr.response, true);  
         
     }
     catch(err)
@@ -326,7 +326,7 @@ function addDroption()
 
 
 
-function parseNames(inString)
+function parseNames(inString, customCheck)
 {
     console.log(inString);
 
@@ -337,7 +337,7 @@ function parseNames(inString)
         if(inString[i]==',')
         {
             console.log(opValue)
-            addToSelect(opValue);
+            addToSelect(opValue, customCheck);
             opValue = "";
             continue;
         } 
@@ -352,12 +352,13 @@ function parseNames(inString)
 
 
 
-function addToSelect(optionValue)
+function addToSelect(optionValue, customCheck)
 {
 
     let drop = document.getElementById("plantChoice");
     let newOp = document.createElement("option");
     newOp.value = optionValue;//give value
+    
  
     let optionName = optionValue;
     
@@ -366,9 +367,16 @@ function addToSelect(optionValue)
     console.log("Name is " + optionName + ", value is " + optionValue);
 
     
-
+   
 
     newOp.innerHTML = optionName;//give name
+
+    if(customCheck==true)
+    {
+        newOp.value = "custom";                     //change custom value back
+        newOp.innerHTML = optionName + "(custom)";  //makes it extremly clear that it is custom
+    }
+
     drop.appendChild(newOp);    //add to list
 }
 
