@@ -313,7 +313,7 @@ function parseNames(inString)
 
     let opValue = "";
 
-    for(let i = 0 ; i < inString.length-1 ; i++)
+    for(let i = 0 ; i < inString.length ; i++)
     {
         if(inString[i]==',')
         {
@@ -371,7 +371,7 @@ let titleWord2 = "";
 let titleWord3 = "";
 if(words[1]!=null)
 {
-    titleWord2 = (secondtWord.charAt(0)-32)+secondWord.substring(1);
+    titleWord2 = (secondWord.charAt(0)-32)+secondWord.substring(1);
 }
 
 if(words[2]!=null)
