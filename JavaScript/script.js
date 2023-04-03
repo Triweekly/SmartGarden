@@ -330,30 +330,59 @@ function parseNames(inString)
     
 }
 
+
+let alertvalue = true;
+
 function addToSelect(optionValue)
 {
 
 
-    alert("Do not submit these added options yet, I haven't finished this function");
+    if(alertvalue){alert("Do not submit these added options yet, I haven't finished this function");alertvalue=false;}
     let drop = document.getElementById("plantChoice");
     let newOp = document.createElement("option");
     newOp.value = optionValue;//give value
  
     let optionName = optionValue;
-    if(optionName.charAt(0)>=97||optionName.charAt(0)<=122) optionName.charAt(0) = optionName.charAt(0)-32; //capitalize the first letter 
-    for(let j = 0 ; j<optionValue.length-1 ; j++)
-    {
-        if(optionName.charAt(j-1)==' ')
-        {
-            if(optionName.charAt(j)>=97||optionName.charAt(j)<=122)optionName.charAt(j) = optionName.charAt(j)-32;
-        }
-    }
+    
+    optionName = titleCase(optionName);
     //now optionName should now be capitalized after spaces
     console.log("Name is " + optionName + ", value is " + optionValue);
 
-    let test = "test".
+    
 
 
     newOp.innerHTML = optionName;//give name
     drop.appendChild(newOp);    //add to list
+}
+
+titleCase(title)    //can handle up to three words (two spaces)
+{
+let lowTitle = title + "";
+lowTitle = lowTitle.toLowerCase(); 
+let firstWord;
+let secondWord;
+let thirdWord;
+let words = lowTitle.split(' ');
+
+firstWord=words[0];
+if(words[1]!=null)secondWord = words[1];
+if(words[2]!=null)thirdWord = words[2];
+
+let titleWord1 = (firstWord.charAt(0)-32)+firstWord.substring(1);
+let titleWord2 = "";
+let titleWord3 = "";
+if(words[1]!=null)
+{
+    titleWord2 = (secondtWord.charAt(0)-32)+secondWord.substring(1);
+}
+
+if(words[2]!=null)
+{
+    titleWord3 = (thirdWord.charAt(0)-32)+thirdWord.substring(1);
+}
+
+
+let fullTitle = titleWord1+ " " + titleWord2 + " " + titleWord3;
+fullTitle.trim();
+return  fullTitle;
 }
