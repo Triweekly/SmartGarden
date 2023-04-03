@@ -21,7 +21,7 @@ else
 
 	while($row = $result->fetch_assoc())
     {
-        $plantPrefs = "\"name:\"" + $row["name"] .",\"prefmoisture\"". $row["prefmoisture"] .",\"prefuv\"". $row["uv"] .",\"prefhumidity\"". $row["prefhumidity"] .",\"preftemperature\"". $row["preftemperature"];
+        $plantPrefs = '\"name:\"' + $row["name"] .',\"prefmoisture\"'. $row["prefmoisture"] .',\"prefuv\"'. $row["uv"] .',\"prefhumidity\"'. $row["prefhumidity"] .',\"preftemperature\"'. $row["preftemperature"];
     }
     returnWithInfo($plantPrefs);
 }
