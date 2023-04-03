@@ -374,7 +374,7 @@ function addToSelect(optionValue, customCheck)
     if(customCheck==true)
     {
         newOp.value = "custom";                     //change custom value back
-        newOp.innerHTML = optionName + " (custom)";  //makes it extremly clear that it is custom
+        newOp.innerHTML = optionName + " (Custom)";  //makes it extremly clear that it is custom
     }
 
     drop.appendChild(newOp);    //add to list

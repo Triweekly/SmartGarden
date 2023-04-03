@@ -50,7 +50,7 @@
                 </form>
 
                 <label class = "customInput" for  = "plantName" id = "label1"><br>Enter plant name: </label>
-                <input class = "customInput" type = "text" id = "plantName" maxlength="25">     <!--Technically max is 30 but idk why 25 seems better to manage displaying. Reevaluate based on characters available to print on screen?-->
+                <input class = "customInput" type = "text" id = "plantName" maxlength="25" onkeyup="checkNameInput();">     <!--Technically max is 30 but idk why 25 seems better to manage displaying. Reevaluate based on characters available to print on screen?-->
                 
                 <label class = "customInput" for  = "plantMoisture" id = "label2"><br>Enter ideal moisture(%): </label>
                 <input class = "customInput" type = "number" id = "plantMoisture" min = "0" max = "100">
@@ -64,6 +64,45 @@
                 <label class = "customInput" for  = "plantTemperature" id = "label5"><br>Enter ideal Temperature: </label>
                 <input class = "customInput" type = "number" id = "plantTemperature" min = "0">
                 
+                <script>
+                        function checkNameInput()       // alpha = 65-90 & 97-122       numeric = 48-57
+                        {
+                                let nameString = document.getElementById("plantName").value + "";
+                                let limit = nameString.length;
+                                let spaceCount=0;
+                                let alertCheck = false;
+                                let validName = "";
+                                
+                                for (let k = 0 ; k < limit ; k++)
+                                {
+                                        let validChar = true;
+                                        let ter = nameString.charCodeAt(k);
+                                        
+                                        if(ter==32) spaceCount++;
+
+                                        if(!(((ter)>=48&&(ter)<=57)||((ter)>=65&&(ter)<=90)||((ter)>=97&&(ter)<=122)||ter==32))
+                                        {
+                                                // nameString.charAt(k).replace('');
+                                                ter=127;
+                                                alertCheck = true;
+                                                validChar = false;
+                                        }
+                                        if(ter==32 && spaceCount >  2)
+                                        {
+                                                // nameString.charAt(k).replace('');
+                                                ter=127;
+                                                validChar = false;
+                                                alertCheck = true;
+                                        }
+                                        if(validChar)validName += String.fromCharCode(ter);
+                                }
+                                console.log(validName);
+                                document.getElementById("plantName").value=validName;
+                                if(alertCheck)alert("Please only use A-Z, a-z, and 0-9, and a maximum of 2 spaces.");   //FIXME replace with a visual popup and disable submit buutton?
+                                else{}//hide the popup and enable submit button
+                        }
+                </script>
+
                 <script>
                         document.getElementById("label1").hidden = true;
                         document.getElementById("label2").hidden = true;
