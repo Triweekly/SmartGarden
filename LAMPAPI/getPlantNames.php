@@ -14,7 +14,7 @@ if ($con->connect_error)
 	} 
 else
 {
-    $stmt = $con->prepare("SELECT name FROM plantprefs");
+    $stmt = $con->prepare("SELECT name FROM plantprefs where custom = \"F\"");
 	$stmt->execute();
 	$result = $stmt->get_result();
 

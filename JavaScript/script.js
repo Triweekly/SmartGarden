@@ -340,19 +340,20 @@ function addToSelect(optionValue)
     newOp.value = optionValue;//give value
  
     let optionName = optionValue;
-    if(optionName.charAt(0)>=97||optionName.charAt(0)<=122)optionName[0] = optionName.charAt(0)-32; //capitalize the first letter 
+    if(optionName.charAt(0)>=97||optionName.charAt(0)<=122) optionName.charAt(0) = optionName.charAt(0)-32; //capitalize the first letter 
     for(let j = 0 ; j<optionValue.length-1 ; j++)
     {
         if(optionName.charAt(j-1)==' ')
         {
-            if(optionName.charAt(j)>=97||optionName.charAt(j)<=122)optionName[j] = optionName.charAt(j)-32;
+            if(optionName.charAt(j)>=97||optionName.charAt(j)<=122)optionName.charAt(j) = optionName.charAt(j)-32;
         }
     }
     //now optionName should now be capitalized after spaces
     console.log("Name is " + optionName + ", value is " + optionValue);
 
+    let test = "test".
 
 
     newOp.innerHTML = optionName;//give name
-    drop.appendChild(newOp);
+    drop.appendChild(newOp);    //add to list
 }
