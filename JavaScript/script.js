@@ -332,6 +332,7 @@ function getCustomFieldInfo()
 
     try
     {
+        console.log(xhr.response);
         let customData = JSON.parse(xhr.response);
         document.getElementById("plantName").value=customData.name;
         document.getElementById("plantMoisture").value=customData.prefmoisture;
