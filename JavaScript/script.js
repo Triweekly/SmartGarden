@@ -9,6 +9,16 @@ let currentTemperature = "";
 
 //JSON syntax: {"moisture": 35.6, "uv": 85.2, "humidity": 96.6, "temperature": 46.2}
 
+
+function getSiteReady()
+{
+    addDroption();
+    loadReadings();
+    checkPrefs();
+    getCustomFieldInfo();
+}
+
+
 function checkNameInput()       // alpha = 65-90 & 97-122       numeric = 48-57
 {
         let nameString = document.getElementById("plantName").value + "";
@@ -322,16 +332,20 @@ function getCustomFieldInfo()
 
     try
     {
-        console.log("confirm JSON syntax before proceeding");
-        console.log(xhr.response);
-        //set results to input field starting values for custom plant
+        let customData = JSON.parse(xhr.response);
+        document.getElementById("plantName").value=customData.name;
+        document.getElementById("plantMoisture").value=customData.prefmoisture;
+        document.getElementById("plantUV").value=customData.prefuv;
+        document.getElementById("plantHumidity").value=customData.prefhumidity;
+        document.getElementById("plantTemperature").value=customData.preftemperature;
+        //   $plantPrefs = '"name":' . $row["name"] .',"prefmoisture":'. $row["prefmoisture"] .',"prefuv":'. $row["prefuv"] .',"prefhumidity":'. $row["prefhumidity"] .',"preftemperature":'. $row["preftemperature"];
     }
     catch(err)
     {
         console.log("Error encountered:");
         console.log(err);
     }
-    //JSON.parse
+    
 }
 
 function setCustomPlant()
