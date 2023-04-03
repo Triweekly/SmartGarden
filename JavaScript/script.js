@@ -331,13 +331,11 @@ function parseNames(inString)
 }
 
 
-let alertvalue = true;
+
 
 function addToSelect(optionValue)
 {
 
-
-    if(alertvalue){alert("Do not submit these added options yet, I haven't finished this function");alertvalue=false;}
     let drop = document.getElementById("plantChoice");
     let newOp = document.createElement("option");
     newOp.value = optionValue;//give value
