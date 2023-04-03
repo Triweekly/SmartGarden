@@ -353,7 +353,7 @@ function addToSelect(optionValue)
     drop.appendChild(newOp);    //add to list
 }
 
-titleCase(title)    //can handle up to three words (two spaces)
+function titleCase(title)    //can handle up to three words (two spaces)
 {
 let lowTitle = title + "";
 lowTitle = lowTitle.toLowerCase(); 
