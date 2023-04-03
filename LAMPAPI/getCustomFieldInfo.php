@@ -14,14 +14,14 @@ if ($con->connect_error)
 	} 
 else
 {
-    $stmt = $con->prepare("SELECT name, moisture, uv, humidity, temperature FROM plantprefs where custom = \"T\"");
+    $stmt = $con->prepare("SELECT name, prefmoisture, prefuv, prefhumidity, preftemperature FROM plantprefs where custom = \"T\"");
 	$stmt->execute();
 	$result = $stmt->get_result();
 
 
 	while($row = $result->fetch_assoc())
     {
-        $plantPrefs = "\"name:\"" + $row["name"] .",\"moisture\"". $row["moisture"] .",\"uv\"". $row["uv"] .",\"humidity\"". $row["humidity"] .",\"temperature\"". $row["temperature"];
+        $plantPrefs = "\"name:\"" + $row["name"] .",\"prefmoisture\"". $row["prefmoisture"] .",\"prefuv\"". $row["uv"] .",\"prefhumidity\"". $row["prefhumidity"] .",\"preftemperature\"". $row["preftemperature"];
     }
     returnWithInfo($plantPrefs);
 }
