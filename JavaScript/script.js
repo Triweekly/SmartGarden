@@ -309,6 +309,30 @@ function setPlant()
 
 }
 
+function getCustomFieldInfo()
+{
+    let url = urlBase + "getCustomFieldInfo." + extension;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", url, false);
+   
+    xhr.send();
+
+
+
+    try
+    {
+        console.log("confirm JSON syntax before proceeding");
+        console.log(xhr.response);
+        //set results to input field starting values for custom plant
+    }
+    catch(err)
+    {
+        console.log("Error encountered:");
+        console.log(err);
+    }
+    //JSON.parse
+}
 
 function setCustomPlant()
 {
