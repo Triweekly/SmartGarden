@@ -333,7 +333,7 @@ function setPlant()
 
 if(dropdown === comp)//custom
 {
-    let tableName = document.getElementById("plantName").value.toString;
+    let tableName = document.getElementById("plantName").value.toString();
     document.getElementById("ph1").innerHTML = tableName;
 }
 else//preset
