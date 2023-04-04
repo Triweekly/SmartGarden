@@ -278,8 +278,32 @@ function setPlant()
 
     if(dropdown === comp)//custom
     {
+        let custName = document.getElementById("plantName").value.toString;
+        let custMoist = document.getElementById("plantMoisture").value.toString;
+        let custLowTemp = document.getElementById("plantUV").value.toString;
+        let custHighTemp = document.getElementById("plantTemperature").value.toString;
+        let custHumidity = document.getElementById("plantHumidity").value.toString;
+
+
+
+
+        let temp = {name:custName, prefmoisture:custMoist, prefuv:custLowTemp, prefhumidity:custHumidity, preftemperature:custHighTemp};
+        let dataSent = JSON.stringify(temp);
+        console.log(dataSent);
+
+
+        let url = urlBase + "setPlant." + extension;
+        xhr.open("GET", url, false);
+
+        // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        
+        // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+
+        xhr.send(dataSent);
         alert("Custom plants not yet supported. Try again later!");
         console.log("WIP- account for custom plants");
+
+        checkPrefs();
     }
     else    //preset
     {
@@ -306,7 +330,12 @@ function setPlant()
     //PH for syntax:let tmp = {userID: userId, og_firstName: modified.firstName, og_lastname: modified.lastName, og_phoneNumber: modified.phoneNumber, og_email: modified.email,firstName: firstname, lastName: lastname, phoneNumber: pnum, email: email};
 
 
-
+if(dropdown === comp)//custom
+{
+    document.getElementById("ph1").innerHTML = document.getElementById("plantName").value;
+}
+else//preset
+{
     let chosenPlant = document.getElementById("plantChoice");
     let newName = chosenPlant.value.toString();
     console.log("new name is " + newName);
@@ -314,8 +343,7 @@ function setPlant()
 
     document.getElementById("ph1").innerHTML = newName;
     console.log("called js setPlant(). Though not done at all yet, Planning to leave Custom considerations for last.");
-
-
+}
 
 }
 
@@ -332,7 +360,6 @@ function getCustomFieldInfo()
 
     try
     {
-        console.log(xhr.response);
         let customData = JSON.parse(xhr.response);
         document.getElementById("plantName").value=customData.name;
         document.getElementById("plantMoisture").value=customData.prefmoisture;
