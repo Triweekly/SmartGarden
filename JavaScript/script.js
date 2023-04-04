@@ -301,17 +301,16 @@ function setPlant()
         // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 
         xhr.send(dataSent);
-        alert("Custom plants not yet supported. Try again later!");
+        // alert("Custom plants not yet supported. Try again later!");
         console.log("WIP- account for custom plants");
 
-        checkPrefs();
+        
     }
     else    //preset
     {
        let temp = {name:dropdown};
        let dataSent = JSON.stringify(temp);
        console.log(dataSent);
-
 
         let url = urlBase + "setPlant." + extension;
         xhr.open("POST", url, false);
@@ -323,9 +322,9 @@ function setPlant()
         xhr.send(dataSent);
         console.log("does it reach here?");
 
-        checkPrefs();
+        
     }
-
+    checkPrefs();
 
 
     //PH for syntax:let tmp = {userID: userId, og_firstName: modified.firstName, og_lastname: modified.lastName, og_phoneNumber: modified.phoneNumber, og_email: modified.email,firstName: firstname, lastName: lastname, phoneNumber: pnum, email: email};
@@ -335,6 +334,7 @@ if(dropdown === comp)//custom
 {
     let tableName = document.getElementById("plantName").value.toString();
     document.getElementById("ph1").innerHTML = tableName;
+    document.getElementById("customOption").innerHTML = titleCase(tableName) + " (Custom)";
 }
 else//preset
 {
@@ -434,7 +434,7 @@ function parseNames(inString, customCheck)
     console.log(inString);
 
     let opValue = "";
-
+    
     for(let i = 0 ; i < inString.length ; i++)
     {
         if(inString[i]==',')
@@ -476,7 +476,8 @@ function addToSelect(optionValue, customCheck)
 
     if(customCheck==true)
     {
-        newOp.value = "custom";                     //change custom value back
+        newOp.value = "custom"; 
+        newOp.id = "customOption";                    //change custom value back
         newOp.innerHTML = optionName + " (Custom)";  //makes it extremly clear that it is custom
     }
 
