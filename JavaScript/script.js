@@ -289,6 +289,7 @@ function setPlant()
 
         let temp = {name:custName, prefmoisture:custMoist, prefuv:custLowTemp, prefhumidity:custHumidity, preftemperature:custHighTemp};
         let dataSent = JSON.stringify(temp);
+        console.log("setting custom plant");
         console.log(dataSent);
 
 
@@ -332,7 +333,8 @@ function setPlant()
 
 if(dropdown === comp)//custom
 {
-    document.getElementById("ph1").innerHTML = document.getElementById("plantName").value;
+    let tableName = document.getElementById("plantName").value.toString;
+    document.getElementById("ph1").innerHTML = tableName;
 }
 else//preset
 {
