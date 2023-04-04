@@ -278,11 +278,11 @@ function setPlant()
 
     if(dropdown === comp)//custom
     {
-        let custName = document.getElementById("plantName").value.toString;
-        let custMoist = document.getElementById("plantMoisture").value.toString;
-        let custLowTemp = document.getElementById("plantUV").value.toString;
-        let custHighTemp = document.getElementById("plantTemperature").value.toString;
-        let custHumidity = document.getElementById("plantHumidity").value.toString;
+        let custName = document.getElementById("plantName").value.toString();
+        let custMoist = document.getElementById("plantMoisture").value.toString();
+        let custLowTemp = document.getElementById("plantUV").value.toString();
+        let custHighTemp = document.getElementById("plantTemperature").value.toString();
+        let custHumidity = document.getElementById("plantHumidity").value.toString();
 
 
 
@@ -293,8 +293,8 @@ function setPlant()
         console.log(dataSent);
 
 
-        let url = urlBase + "setPlant." + extension;
-        xhr.open("GET", url, false);
+        let url = urlBase + "setCustomPlant." + extension;
+        xhr.open("POST", url, false);
 
         // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
         
