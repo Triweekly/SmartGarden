@@ -131,9 +131,9 @@ function parseReadings(inString)
         // console.log("caseVar = " + caseVar);
 
         document.getElementById("ph1").innerHTML = getName();
-        document.getElementById("ph2").innerHTML = getMoisture();
+        document.getElementById("ph2").innerHTML = getMoisture() + "%";
         document.getElementById("ph3").innerHTML = getUV();
-        document.getElementById("ph4").innerHTML = getHumidity();
+        document.getElementById("ph4").innerHTML = getHumidity() + "%";
         document.getElementById("ph5").innerHTML = getTemperature();
 }
 
@@ -200,7 +200,7 @@ function parsePrefs(inString)
                     switch(caseVar) {
                         
                         case 1:
-                            document.getElementById("pref1").innerHTML = temp;
+                            document.getElementById("pref1").innerHTML = temp + "%";
                             // console.log(currentMoisture);
                             break;
                         case 2:
@@ -208,7 +208,7 @@ function parsePrefs(inString)
                             // console.log(currentUV);
                             break;
                         case 3:
-                            document.getElementById("pref3").innerHTML = temp;
+                            document.getElementById("pref3").innerHTML = temp + "%";
                             // console.log(currentHumidity);
                             break;
                         case 4:
