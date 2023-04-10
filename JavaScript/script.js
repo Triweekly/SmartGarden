@@ -134,7 +134,7 @@ function parseReadings(inString)
         document.getElementById("ph2").innerHTML = getMoisture() + "%";
         document.getElementById("ph3").innerHTML = getUV();
         document.getElementById("ph4").innerHTML = getHumidity() + "%";
-        document.getElementById("ph5").innerHTML = getTemperature();
+        document.getElementById("ph5").innerHTML = getTemperature() + " °F";
 }
 
 //getters for table
