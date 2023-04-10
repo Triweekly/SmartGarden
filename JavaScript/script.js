@@ -253,8 +253,8 @@ function customShowHide()
             document.getElementById("plantMoisture").hidden = false;
             document.getElementById("plantUV").hidden = false;
             document.getElementById("plantHumidity").hidden = false;
-            document.getElementById("plantTemperature").hidden = false;
-
+            document.getElementById("plantTemperature").hidden = false;     
+            document.getElementById("afterbreak").hidden = false;
         }
     else  
         {
@@ -268,6 +268,7 @@ function customShowHide()
             document.getElementById("plantUV").hidden = true;
             document.getElementById("plantHumidity").hidden = true;
             document.getElementById("plantTemperature").hidden = true;
+            document.getElementById("afterbreak").hidden = true;
         }
 }
 

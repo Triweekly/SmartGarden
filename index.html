@@ -47,10 +47,10 @@
                         <option value = "oregano">Oregano</option>
                         <option value = "cilantro">Cilantro</option>
                         <option value = "custom">Custom</option> -->
-                </select><br>
+                </select>
                 </form>
 
-                <label class = "customInput" for  = "plantName" id = "label1"><br>Enter Plant Name: </label>
+                <label class = "customInput" for  = "plantName" id = "label1"><br><br>Enter Plant Name: </label>
                 <input class = "customInput" type = "text" id = "plantName" maxlength="25" size = "25" onkeyup="checkNameInput();" onpaste = "return false;" ondrop="return false;">     <!--Technically max is 30 but idk why 25 seems better to manage displaying. Reevaluate based on characters available to print on screen?-->
                 
                 <label class = "customInput" for  = "plantMoisture" id = "label2"><br>Enter Ideal Moisture(%): </label>
@@ -64,7 +64,7 @@
                 
                 <label class = "customInput" for  = "plantTemperature" id = "label5"> and </label>
                 <input class = "customInput" type = "number" id = "plantTemperature" min = "0">
-                
+                <label id ="afterbreak"><br></label>
                 <!-- <script>
                         function checkNameInput()       // alpha = 65-90 & 97-122       numeric = 48-57
                         {
