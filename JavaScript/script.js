@@ -204,11 +204,11 @@ function parsePrefs(inString)
                             // console.log(currentMoisture);
                             break;
                         case 2:
-                            document.getElementById("pref2").innerHTML = temp;
+                            templow = temp;
                             // console.log(currentUV);
                             break;
                         case 3:
-                            templow = temp;
+                            document.getElementById("pref3").innerHTML = temp;
                             // console.log(currentHumidity);
                             break;
                         case 4:
