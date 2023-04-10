@@ -50,7 +50,7 @@
                 </select>
                 </form>
 
-                <label class = "customInput" for  = "plantName" id = "label1"><br><br>Enter Plant Name: </label>
+                <label class = "customInput" for  = "plantName" id = "label1"><br>Enter Plant Name: </label>
                 <input class = "customInput" type = "text" id = "plantName" maxlength="25" size = "25" onkeyup="checkNameInput();" onpaste = "return false;" ondrop="return false;">     <!--Technically max is 30 but idk why 25 seems better to manage displaying. Reevaluate based on characters available to print on screen?-->
                 
                 <label class = "customInput" for  = "plantMoisture" id = "label2"><br>Enter Ideal Moisture(%): </label>
@@ -115,14 +115,15 @@
                         document.getElementById("plantUV").hidden = true;
                         document.getElementById("plantHumidity").hidden = true;
                         document.getElementById("plantTemperature").hidden = true;
+                        document.getElementById("afterbreak").hidden = true;
+                        
                 </script>
-                <br><br>
                 
                 
 
 
 
-
+                <br>
                 <button onclick = "setPlant();" value = "Set Plant Type">Set Plant Type</button>
 
 
