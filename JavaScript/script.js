@@ -185,6 +185,10 @@ function parsePrefs(inString)
     // console.log("inString is " + inString);
     let temp = "";
     let caseVar = 1;
+
+    let templow = "";
+    let temphigh = "";
+
     for(let i = 0 ; i < inString.length ; i++)
         {
             if(inString.charAt(i)!=',')
@@ -204,11 +208,12 @@ function parsePrefs(inString)
                             // console.log(currentUV);
                             break;
                         case 3:
-                            document.getElementById("pref3").innerHTML = temp;
+                            templow = temp;
                             // console.log(currentHumidity);
                             break;
                         case 4:
-                            document.getElementById("pref4").innerHTML = temp;
+                            temphigh = temp;
+                            document.getElementById("pref4").innerHTML = templow + " - " + temphigh + " °F";
                             // console.log(currentTemperature);
                             break;
                     }
