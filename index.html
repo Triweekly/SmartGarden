@@ -23,8 +23,8 @@
                 background-image: url('images/gardenicon.png');
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                background-size: 400px 400px;
-                object-position: 50% 50%;
+                background-size: 900px 900px;
+                background-position: 50% 0%;
                 }
                 table{
                 background:rgb(135, 206, 235, 0.7);
@@ -43,9 +43,15 @@
                         setTimeout(onceMore,15000);
                 }
         </script>
-        <body onload = "getSiteReady();setTimeout(onceMore,15000);">
-                <hl>SMART Garden</hl>
+        <body bgcolor="#90EE90" onload = "getSiteReady();setTimeout(onceMore,15000);">
+                <!-- <hl>SMART Garden</hl> -->
+                <font size="15" face="Brush Script MT" color=#009933>
+                <p style="text-align:center;"> <strong> SMART Garden </strong> </p>
+                
+                </font>
                 <form>    <!-- maybe need an action here -->
+                
+                <div  style ="text-align:center;">
                 <label for ="plant">Choose your plant:</label>
                 <select id = "plantChoice" name = "plant" onchange="customShowHide()">
                         <!-- <option value = "basil">Basil</option>
@@ -56,7 +62,9 @@
                         <option value = "custom">Custom</option> -->
                 </select>
                 </form>
-
+                </div> 
+                
+                <div  style ="text-align:center;">
                 <label class = "customInput" for  = "plantName" id = "label1"><br>Enter Plant Name: </label>
                 <input class = "customInput" type = "text" id = "plantName" maxlength="25" size = "25" onkeyup="checkNameInput();" onpaste = "return false;" ondrop="return false;">     <!--Technically max is 30 but idk why 25 seems better to manage displaying. Reevaluate based on characters available to print on screen?-->
                 
@@ -71,6 +79,8 @@
                 
                 <label class = "customInput" for  = "plantTemperature" id = "label5"> and </label>
                 <input class = "customInput" type = "number" id = "plantTemperature" min = "0">
+                
+                </div>
                 <label id ="afterbreak"><br></label>
                 <!-- <script>
                         function checkNameInput()       // alpha = 65-90 & 97-122       numeric = 48-57
@@ -131,8 +141,9 @@
 
 
                 <br>
+                <div  style ="text-align:center;">
                 <button onclick = "setPlant();" value = "Set Plant Type">Set Plant Type</button>
-
+                </div>
 
                 <br>
                 
