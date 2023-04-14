@@ -19,7 +19,34 @@
 
                 </style>
         </head>
-        <style>body{
+
+        <style>
+                .button {
+                  border: none;
+                  color: black;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  cursor: pointer;
+                }
+        .button1 {background-color: #4CAF50;} /* Green */
+        .button1 {  background-color: green; 
+                    color: black; 
+                    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+        </style>
+
+        
+        <style>
+                body{
                 background-image: url('images/gardenicon.png');
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -142,7 +169,7 @@
 
                 <br>
                 <div  style ="text-align:center;">
-                <button onclick = "setPlant();" value = "Set Plant Type">Set Plant Type</button>
+                <button class="button button1" onclick = "setPlant();" value = "Set Plant Type">Set Plant Type </button>
                 </div>
 
                 <br>
