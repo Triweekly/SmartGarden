@@ -52,7 +52,7 @@
                 <form>    <!-- maybe need an action here -->
                 
                 <div  style ="text-align:center;">
-                <label for ="plant">Choose your plant:</label>
+                <label for ="plant"> <strong>Choose your plant: </strong> </label>
                 <select id = "plantChoice" name = "plant" onchange="customShowHide()">
                         <!-- <option value = "basil">Basil</option>
                         <option value = "mint">Mint</option>
@@ -65,19 +65,19 @@
                 </div> 
                 
                 <div  style ="text-align:center;">
-                <label class = "customInput" for  = "plantName" id = "label1"><br>Enter Plant Name: </label>
+                <label class = "customInput" for  = "plantName" id = "label1"><br> <strong> Enter Plant Name: </strong>  </label>
                 <input class = "customInput" type = "text" id = "plantName" maxlength="25" size = "25" onkeyup="checkNameInput();" onpaste = "return false;" ondrop="return false;">     <!--Technically max is 30 but idk why 25 seems better to manage displaying. Reevaluate based on characters available to print on screen?-->
                 
-                <label class = "customInput" for  = "plantMoisture" id = "label2"><br>Enter Ideal Moisture(%): </label>
+                <label class = "customInput" for  = "plantMoisture" id = "label2"><br> <strong> Enter Ideal Moisture(%): </strong> </label>
                 <input class = "customInput" type = "number" id = "plantMoisture" min = "0" max = "100">
                 
-                <label class = "customInput" for  = "plantHumidity" id = "label4"><br>Enter Ideal Humidity(%): </label>
+                <label class = "customInput" for  = "plantHumidity" id = "label4"><br> <strong> Enter Ideal Humidity(%): </strong>  </label>
                 <input class = "customInput" type = "number" id = "plantHumidity" min = "0" max = "100">
                 
-                <label class = "customInput" for  = "plantUV" id = "label3"><br>Enter ideal Temperature range in °F: between <br></label>
+                <label class = "customInput" for  = "plantUV" id = "label3"><br> <strong> Enter ideal Temperature range in °F: between </strong>  <br></label>
                 <input class = "customInput" type = "number" id = "plantUV" min = "0">
                 
-                <label class = "customInput" for  = "plantTemperature" id = "label5"> and </label>
+                <label class = "customInput" for  = "plantTemperature" id = "label5"> <b> and </b>  </label>
                 <input class = "customInput" type = "number" id = "plantTemperature" min = "0">
                 
                 </div>
