@@ -395,7 +395,7 @@ function addDroption()
     let url = urlBase + "getPlantNames." + extension;
 
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
+    xhr.open("GET", url, false);
    
     xhr.send();
 
@@ -423,7 +423,7 @@ function addDroption()
     try
     {
         console.log(xhr.response);
-        parseNames(xhr.response, false);  
+        parseNames(xhr.response, true);  
         
     }
     catch(err)
