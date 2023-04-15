@@ -19,39 +19,12 @@
 
                 </style>
         </head>
-
-        <style>
-                .button1 {
-                  border: none;
-                  color: black;
-                  padding: 15px 32px;
-                  text-align: center;
-                  text-decoration: none;
-                  display: inline-block;
-                  font-size: 16px;
-                  margin: 4px 2px;
-                  cursor: pointer;
-                }
-        .button1 {background-color: #4CAF50;} /* Green */
-        .button1 {  background-color: green; 
-                    color: black; 
-                    border: 2px solid black;
-}
-
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-        </style>
-
-        
-        <style>
-                body{
+        <style>body{
                 background-image: url('images/gardenicon.png');
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                background-size: 900px 900px;
-                background-position: 50% 0%;
+                background-size: 400px 400px;
+                object-position: 50% 50%;
                 }
                 table{
                 background:rgb(135, 206, 235, 0.7);
@@ -70,16 +43,10 @@
                         setTimeout(onceMore,15000);
                 }
         </script>
-        <body background-color="#90EE90" onload = "getSiteReady();setTimeout(onceMore,15000);">
-                <!-- <hl>SMART Garden</hl> -->
-                <!-- <font size="15" face="Brush Script MT" color=#009933> -->
-                <p style="text-align:center;"> <strong> SMART Garden </strong> </p>
-                
-                <!-- </font> -->
+        <body onload = "getSiteReady();setTimeout(onceMore,15000);">
+                <hl>SMART Garden</hl>
                 <form>    <!-- maybe need an action here -->
-                
-                <div  style ="text-align:center;">
-                <label for ="plant"> <strong>Choose your plant: </strong> </label>
+                <label for ="plant">Choose your plant:</label>
                 <select id = "plantChoice" name = "plant" onchange="customShowHide()">
                         <!-- <option value = "basil">Basil</option>
                         <option value = "mint">Mint</option>
@@ -89,25 +56,21 @@
                         <option value = "custom">Custom</option> -->
                 </select>
                 </form>
-                </div> 
-                
-                <div  style ="text-align:center;">
-                <label class = "customInput" for  = "plantName" id = "label1"><br> <strong> Enter Plant Name: </strong>  </label>
+
+                <label class = "customInput" for  = "plantName" id = "label1"><br>Enter Plant Name: </label>
                 <input class = "customInput" type = "text" id = "plantName" maxlength="25" size = "25" onkeyup="checkNameInput();" onpaste = "return false;" ondrop="return false;">     <!--Technically max is 30 but idk why 25 seems better to manage displaying. Reevaluate based on characters available to print on screen?-->
                 
-                <label class = "customInput" for  = "plantMoisture" id = "label2"><br> <strong> Enter Ideal Moisture(%): </strong> </label>
+                <label class = "customInput" for  = "plantMoisture" id = "label2"><br>Enter Ideal Moisture(%): </label>
                 <input class = "customInput" type = "number" id = "plantMoisture" min = "0" max = "100">
                 
-                <label class = "customInput" for  = "plantHumidity" id = "label4"><br> <strong> Enter Ideal Humidity(%): </strong>  </label>
+                <label class = "customInput" for  = "plantHumidity" id = "label4"><br>Enter Ideal Humidity(%): </label>
                 <input class = "customInput" type = "number" id = "plantHumidity" min = "0" max = "100">
                 
-                <label class = "customInput" for  = "plantUV" id = "label3"><br> <strong> Enter ideal Temperature range in °F: between </strong>  <br></label>
+                <label class = "customInput" for  = "plantUV" id = "label3"><br>Enter ideal Temperature range in °F: between <br></label>
                 <input class = "customInput" type = "number" id = "plantUV" min = "0">
                 
-                <label class = "customInput" for  = "plantTemperature" id = "label5"> <b> and </b>  </label>
+                <label class = "customInput" for  = "plantTemperature" id = "label5"> and </label>
                 <input class = "customInput" type = "number" id = "plantTemperature" min = "0">
-                
-                </div>
                 <label id ="afterbreak"><br></label>
                 <!-- <script>
                         function checkNameInput()       // alpha = 65-90 & 97-122       numeric = 48-57
@@ -124,7 +87,6 @@
                                         let ter = nameString.charCodeAt(k);
                                         
                                         if(ter==32) spaceCount++;
-
                                         if(!(((ter)>=48&&(ter)<=57)||((ter)>=65&&(ter)<=90)||((ter)>=97&&(ter)<=122)||ter==32))
                                         {
                                                 // nameString.charAt(k).replace('');
@@ -168,9 +130,8 @@
 
 
                 <br>
-                <div  style ="text-align:center;">
-                <button class="button button1" onclick = "setPlant();" value = "Set Plant Type">Set Plant Type </button>
-                </div>
+                <button onclick = "setPlant();" value = "Set Plant Type">Set Plant Type</button>
+
 
                 <br>
                 
