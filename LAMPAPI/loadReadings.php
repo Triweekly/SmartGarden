@@ -1,5 +1,7 @@
 <?php
-
+header('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: http://smartgarden34.com');
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
