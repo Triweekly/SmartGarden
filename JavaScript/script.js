@@ -416,14 +416,14 @@ function addDroption()
     url = urlBase + "getCustomNames." + extension;
 
     xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
+    xhr.open("GET", url, false);
    
     xhr.send();
 
     try
     {
         console.log(xhr.response);
-        parseNames(xhr.response, true);  
+        parseNames(xhr.response, false);  
         
     }
     catch(err)
