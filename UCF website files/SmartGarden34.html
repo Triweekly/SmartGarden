@@ -39,7 +39,7 @@
         color: white;
         }
                 body{
-                    background-color: white;
+                    background-color: rgba(102, 198, 236, 0.8);
                 background-image: url('images/gardenicon.png');
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -68,37 +68,40 @@
                           text-align: center;
                         }
                         table.picholder, td.picholder, th.picholder{
-                            background-color: white;
-                            border: 0px solid white;
+                            /* background-color: white; */
+                            border: none;
                             text-align: center;
                         }
                         table.picholder{
-                            box-shadow: 0px 0px 10px 10px white;
+                            /* box-shadow: 0px 0px 10px 10px white; */
                             margin-left: auto; 
                             margin-right: auto;
                         }
                         table.center {
-                            background-color: rgb(135, 206, 235);
+                            background-color: rgb(135, 206, 235, .8);
                             margin-left: auto; 
                             margin-right: auto;
                         }
             h1, p, b{text-align: center;
             align-items: center;}
             p.para{display: block;
-                padding-left:  10%;
-                padding-right: 10%;}
+                padding-left:  20%;
+                padding-right: 20%;
+                text-shadow: 2px 2px 1px  white;}
             p.title{font-size:100px;}
             img.graphic{display: block;
                         margin-left: auto;
                         margin-right: auto;}
-                        span.white{color: white;}
-            span.link{text-shadow: 4px 4px 4px 4px white;}
+            span.clear{color: transparent;}
+            div.video{height: 900px;
+                        width: 2000px;}
+            video{border: 15px ridge rgb(53, 193, 248);}
                         
     
 </style>
 
         <body>
-        
+        <div>
             <font size="15" face="Brush Script MT" color="#009933">
                 <p class = "title"> SMART Garden</p>
                 
@@ -108,18 +111,21 @@
 
                 <p style = "font-size: x-large;"><strong>Why a smart garden?<strong></p>
                 <p class = "para">As inflation in the United States continues to rise, and global supply chain issues persist, working class people are finding it harder and harder to be able to find or afford healthy food options at their local grocery stores. The looming fear of large-scale food scarcity coupled with the steadily declining economy have forced many Americans to turn to unhealthy food alternatives. The smart garden presents a small but impactful way to help counteract this issue and benefit the lives of those in need. Our goal in creating this product doesn’t stop at financially benefiting the lives of the people who use it. The SMART Garden serves as a way to better the health of the individual, both physically and mentally. </p>
-<br>
+            <br>
 
+                <p style = "font-size: x-large;"><strong>What is  a smart garden?<strong></p>
+                <p class = "para">A smart garden is a garden that can automatically care for your plants, very often with some connection to an 'internet of things', allowing you to configure it wirelessly. Ours does this by letting you select the ideal conditions for your plant and monitoring the soil moisture of the garden's soil. If the soil is too dry, the pumps are activated and the plant is watered. With the garden connected to Wi-Fi, it will automatically retrieve the latest ideal values from our website and upate it with the most recent sensor readings. You can view the soil moisture, humidity, and temperature of the garden from anywhere, all while being sure your plant receives only as much water as it needs. </p>
+            <br>
                 <table class = "picholder">
                     <tr>
                         <th class = "picholder">Hardware Block Diagram</th>
-                        <th class = "picholder"><span class = "white">spacerspacer</span></th>
+                        <th class = "picholder"><span class = "clear">spacerspacer</span></th>
                         <th class = "picholder">Software Block Diagram</th>
                     </tr>
                     <tr>
-                        <td class = "picholder"><img class = "graphic" width = 521 height = 384 src = "images/hardware.jpg"></img></td>
-                        <td class = "picholder"><span class = "white">spacerspacer</span></td>
-                        <td class = "picholder"><img class = "graphic" width = 320 height = 274 src = "images/software.jpg"></img></td>
+                        <td class = "picholder"><img class = "graphic" width = 521 height = 289 src = "images/HardwareDiagram.png"></img></td>
+                        <td class = "picholder"><span class = "clear">spacerspacer</span></td>
+                        <td class = "picholder"><img class = "graphic" width = 438 height = 274 src = "images/SoftwareDiagram.png"></img></td>
                     </tr>
                 </table>
                 
@@ -132,17 +138,36 @@
                     <a href="docs/DandC.docx">10 Page Divide and Conquer Document</a>
                     <a href="docs/SD1Report.docx">Senior Design I Final Report</a>
                     <a href="images/gardenicon.png">8 Page Conference Paper</a>
-                    <a href="images/gardenicon.png">Senior Design II Final Report</a>   NEED TO FINISH
-                    <a href="docs/CDR.pptx">CDR Presentation Slide</a>
-                    <a href="images/gardenicon.png">Final Presentation Slides</a>
-                    <a href="images/gardenicon.png">Final Presentation Video</a>
-                    <a href="images/gardenicon.png">Final Demonstration Video</a>
+                    <a href="images/gardenicon.png">Senior Design II Final Report</a>   ^NEED TO FINISH^
+                    <a href="docs/CriticalDesignReview.pptx">CDR Presentation Slides</a>
+                    <a href="docs/FinalPresentation.pptx">Final Presentation Slides</a>
+                    <p style = "font-size: x-large;"><strong>Video Links (Viewable below)<strong></p>
+                    <a href="docs/FinalPresentation.mp4">Final Presentation Video</a><br>
+                    <a href="docs/FinalDemonstration.mp4">Final Demonstration Video</a>
+
+<br><br>
+                    <div class = "video">
+                        <p><strong style="font-size: larger;">Final Presentation Video</strong></p>
+                        <video width="1261" height="719" controls preload="auto">
+                            <source src="docs/FinalPresentation.mp4" type="video/mp4">
+                         </video>
+                         <br><br><br>
+                         <p><strong style="font-size: larger;">Final Demonstration Video</strong></p>
+                        <video width="1261" height="719" controls preload="auto">
+                            <source src="docs/FinalDemonstration.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
                     <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>
                 </div>
-                <br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br> <div style = "height: 1700px;"></div>
                 <hr>
                 <p style = "font-size: x-large;"><strong>About the Team<strong></p>
                 <br>
+        
+                
+        
+        
         <div class = "aboutus" id = "kevin">
             <div class = "container">
             
@@ -150,7 +175,7 @@
                 <tr> 
                     <th><img class = "portrait" name = "kevin" width = 130 height = 170 src = "images/kevin.jpg"></img></th>
                     <th><img class = "portrait" name = "lauren" width = 130 height = 170 src = "images/lauren.jpg"></img></th>
-                    <th><img class = "portrait" name = "ryan" width = 130 height = 170 src = "images/ryan.png"></img></th>
+                    <th><img class = "portrait" name = "ryan" width = 150 height = 170 src = "images/ryan.png" title = "Ryan elected to not be pictured here."></img></th>
                     <th><img class = "portrait" name = "jonathan" width = 130 height = 170 src = "images/jonathan.jpg"></img></th>
                 </tr>
                 <tr>
@@ -163,10 +188,10 @@
                  </div>   
 
         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <hr>
-        
-
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;
+        <!--These ^ are necessary for spacing that allows the bottom of the content to be nearer the middle of the screen -->
+    </div>
         </body>
     </head>
 </html>
